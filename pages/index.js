@@ -1,3 +1,4 @@
+import React from 'react';
 import Markdown from 'markdown-to-jsx';
 
 import Layout from '../components/layout';
@@ -13,24 +14,19 @@ function Home() {
             {lighthouse.finalUrl}
           </span>
         </h2>
-        {/* {lighthouse.audits['redirects-http'].score === 0 && ( */}
         <dl>
-          <dt>{lighthouse.audits['redirects-http'].title}</dt>
-          <dd>
-            <Markdown>
-              {lighthouse.audits['redirects-http'].description}
-            </Markdown>
-          </dd>
+          {Object.values(lighthouse.audits).map(data => {
+            console.log(data);
+            return (
+              <React.Fragment key={data.index}>
+                <dt className="block font-bold mt-4">{data.title}</dt>
+                <dd>
+                  <Markdown>{data.description}</Markdown>
+                </dd>
+              </React.Fragment>
+            );
+          })}
         </dl>
-        {/* )} */}
-        {/* {lighthouse.audits['viewport'].score === 0 && ( */}
-        <dl>
-          <dt>{lighthouse.audits.viewport.title}</dt>
-          <dd>
-            <Markdown>{lighthouse.audits.viewport.description}</Markdown>
-          </dd>
-        </dl>
-        {/* )} */}
       </div>
     </Layout>
   );
