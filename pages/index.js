@@ -15,17 +15,14 @@ function Home() {
           </span>
         </h2>
         <dl>
-          {Object.values(lighthouse.audits).map(data => {
-            console.log(data);
-            return (
-              <React.Fragment key={data.index}>
-                <dt className="block font-bold mt-4">{data.title}</dt>
-                <dd>
-                  <Markdown>{data.description}</Markdown>
-                </dd>
-              </React.Fragment>
-            );
-          })}
+          {Object.values(lighthouse.audits).map(data => (
+            <React.Fragment key={data.index}>
+              <dt className="block font-bold mt-4">{data.title}</dt>
+              <dd>
+                <Markdown>{data.description}</Markdown>
+              </dd>
+            </React.Fragment>
+          ))}
         </dl>
       </div>
     </Layout>
