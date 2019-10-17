@@ -1,13 +1,5 @@
 /* Base styles */
 
-dl {
-  @apply flex flex-wrap items-center justify-between mt-6 overflow-x-auto w-full;
-}
-
-dt {
-  @apply font-bold;
-}
-
 a:not([class]) {
   @apply font-bold text-teal-700 underline;
 }
