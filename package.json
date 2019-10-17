@@ -26,6 +26,7 @@
     "@zeit/next-css": "^1.0.1",
     "autoprefixer": "9.6.5",
     "cssnano": "4.1.10",
+    "markdown-to-jsx": "^6.10.3",
     "next": "^9.1.1",
     "postcss-import": "^12.0.1",
     "prop-types": "^15.7.2",
