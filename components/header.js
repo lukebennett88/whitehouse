@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { useState } from "react";
+import Link from 'next/link';
+import { useState } from 'react';
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -10,6 +10,7 @@ function Header() {
         <div className="flex items-center">
           <img
             src="/static/tailwind-logo.svg"
+            alt="Tailwind logo."
             className="mr-3 text-white w-10"
           />
 
@@ -23,6 +24,7 @@ function Header() {
         <button
           className="block md:hidden border border-white flex items-center px-3 py-2 rounded text-white"
           onClick={() => toggleExpansion(!isExpanded)}
+          type="button"
         >
           <svg
             className="fill-current h-3 w-3"
@@ -39,10 +41,7 @@ function Header() {
             isExpanded ? `block` : `hidden`
           } md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto`}
         >
-          {[
-            { title: "Home", route: "/" },
-            { title: "About", route: "/about" }
-          ].map(navigationItem => (
+          {[{ title: 'Home', route: '/' }].map(navigationItem => (
             <li className="mt-3 md:mt-0 md:ml-6" key={navigationItem.title}>
               <Link href={navigationItem.route}>
                 <a className="block text-white">{navigationItem.title}</a>
