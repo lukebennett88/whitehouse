@@ -17,7 +17,9 @@ function Home() {
         <dl>
           {Object.values(lighthouse.audits).map(data => (
             <React.Fragment key={data.index}>
-              <dt className="block font-bold mt-4">{data.title}</dt>
+              <dt className="block font-bold mt-4">
+                <Markdown>{data.title}</Markdown>
+              </dt>
               <dd>
                 <Markdown>{data.description}</Markdown>
               </dd>
