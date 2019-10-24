@@ -14,11 +14,11 @@ const ColorContrast = ({ lighthouse }) => (
             {lighthouse.audits['color-contrast'].details.headings[0].text}
           </h3>
           {lighthouse.audits['color-contrast'].details.items.map(item => (
-            <div className="bg-indigo-100 mt-4 px-2 py-4 rounded">
+            <div className="bg-indigo-100 mt-4 p-4 rounded">
               <h4>
                 <Markdown>{item.node.nodeLabel}</Markdown>
               </h4>
-              <pre className="bg-white font-black mt-4 overflow-x-auto px-2 py-1 rounded text-indigo-800">
+              <pre className="bg-white font-black mt-4 overflow-x-auto px-4 py-2 rounded text-indigo-800">
                 <code>{item.node.snippet}</code>
               </pre>
               <p className="mt-4">
