@@ -1,8 +1,12 @@
 /* Base styles */
 
 a:not([class]) {
-  @apply font-bold text-teal-700 underline;
+  @apply font-black text-indigo-700 underline;
 }
 a:hover:not([class]) {
-  @apply text-teal-600;
+  @apply text-indigo-600;
+}
+
+dt {
+  @apply font-black mt-4;
 }

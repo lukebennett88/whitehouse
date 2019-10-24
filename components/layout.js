@@ -4,7 +4,7 @@ import '../css/tailwind.css';
 
 function Layout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen text-gray-800">
       <main className="flex-1 max-w-4xl mx-auto p-4 md:px-8 md:py-16 w-full">
         {children}
       </main>
@@ -13,7 +13,7 @@ function Layout({ children }) {
 }
 
 Layout.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.array,
 };
 
 export default Layout;
