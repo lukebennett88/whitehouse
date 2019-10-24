@@ -18,7 +18,7 @@ const ColorContrast = ({ lighthouse }) => (
               <h4>
                 <Markdown>{item.node.nodeLabel}</Markdown>
               </h4>
-              <pre className="bg-white font-black mt-4 px-2 py-1 rounded text-indigo-800">
+              <pre className="bg-white font-black mt-4 overflow-x-auto px-2 py-1 rounded text-indigo-800">
                 <code>{item.node.snippet}</code>
               </pre>
               <p className="mt-4">
