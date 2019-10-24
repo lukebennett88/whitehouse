@@ -12,14 +12,14 @@ function Home() {
       <Head>
         <title>Whitehouse: White-Labelled Google Lighthouse reports</title>
       </Head>
-      <h1 className="font-black leading-none text-4xl">
+      <h1 className="font-black leading-none overflow-x-auto text-4xl w-full">
         <span>Report for: </span>
         <br />
         <a
           href={lighthouse.finalUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="leading-loose overflow-x-auto text-2xl text-indigo-700"
+          className="leading-loose text-2xl text-indigo-700"
         >
           {lighthouse.finalUrl}
         </a>
