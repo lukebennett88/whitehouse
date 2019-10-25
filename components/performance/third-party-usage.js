@@ -1,19 +1,20 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
 
-const ThirdPartyUsage = ({ lighthouse }) => (
-  <li>
-    <dl>
-      <dt>
-        <Markdown>{lighthouse.audits['third-party-summary'].title}</Markdown>
-      </dt>
-      <dd>
-        <Markdown>
-          {lighthouse.audits['third-party-summary'].description}
-        </Markdown>
-      </dd>
-    </dl>
-  </li>
-);
+const ThirdPartySummary = ({ lighthouse }) =>
+  lighthouse.audits['third-party-summary'].score !== 1 && (
+    <li>
+      <dl>
+        <dt>
+          <Markdown>{lighthouse.audits['third-party-summary'].title}</Markdown>
+        </dt>
+        <dd>
+          <Markdown>
+            {lighthouse.audits['third-party-summary'].description}
+          </Markdown>
+        </dd>
+      </dl>
+    </li>
+  );
 
-export default ThirdPartyUsage;
+export default ThirdPartySummary;

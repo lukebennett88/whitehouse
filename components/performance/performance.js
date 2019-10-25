@@ -1,13 +1,13 @@
 import React from 'react';
 import {
   FirstMeaningfulPaint,
-  TimeToInteractive,
-  ProperlySizeImages,
-  MinifyCSS,
-  RemoveUnusedCSS,
-  EnableTextCompression,
-  AvoidsEnormousNetworkPayloads,
-  ThirdPartyUsage,
+  Interactive,
+  UsesResponsiveImages,
+  UnminifiedCSS,
+  UnusedCSSRules,
+  UsesTextCompression,
+  TotalByteWeight,
+  ThirdPartySummary,
 } from './index';
 
 const Performance = ({ lighthouse }) => (
@@ -15,13 +15,13 @@ const Performance = ({ lighthouse }) => (
     <h3 className="font-black text-xl tracking-wide uppercase">Performance</h3>
     <ul>
       <FirstMeaningfulPaint lighthouse={lighthouse} />
-      <TimeToInteractive lighthouse={lighthouse} />
-      <ProperlySizeImages lighthouse={lighthouse} />
-      <MinifyCSS lighthouse={lighthouse} />
-      <RemoveUnusedCSS lighthouse={lighthouse} />
-      <EnableTextCompression lighthouse={lighthouse} />
-      <AvoidsEnormousNetworkPayloads lighthouse={lighthouse} />
-      <ThirdPartyUsage lighthouse={lighthouse} />
+      <Interactive lighthouse={lighthouse} />
+      <UsesResponsiveImages lighthouse={lighthouse} />
+      <UnminifiedCSS lighthouse={lighthouse} />
+      <UnusedCSSRules lighthouse={lighthouse} />
+      <UsesTextCompression lighthouse={lighthouse} />
+      <TotalByteWeight lighthouse={lighthouse} />
+      <ThirdPartySummary lighthouse={lighthouse} />
     </ul>
   </article>
 );
