@@ -32,7 +32,9 @@ export const UsesTextCompression = ({ lighthouse }) =>
                 {lighthouse.audits['uses-text-compression'].details.items.map(
                   item => (
                     <tr className="odd:bg-white">
-                      <td className="px-4 py-2">{item.url}</td>
+                      <td className="flex items-center py-2 px-4">
+                        {item.url}
+                      </td>
                       <td className="px-4 py-2 text-right whitespace-no-wrap">
                         {commaNumber(item.totalBytes)} kB
                       </td>

@@ -2,20 +2,18 @@ import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import commaNumber from 'comma-number';
 
-export const UsesResponsiveImages = ({ lighthouse }) =>
-  lighthouse.audits['uses-responsive-images'].score !== 1 && (
+export const OffscreenImages = ({ lighthouse }) =>
+  lighthouse.audits['offscreen-images'].score !== 1 && (
     <li>
       <dl>
         <dt>
-          <Markdown>
-            {lighthouse.audits['uses-responsive-images'].title}
-          </Markdown>
+          <Markdown>{lighthouse.audits['offscreen-images'].title}</Markdown>
         </dt>
         <dd>
           <details>
             <summary>
               <Markdown>
-                {lighthouse.audits['uses-responsive-images'].description}
+                {lighthouse.audits['offscreen-images'].description}
               </Markdown>
             </summary>
             <table className="mt-2 overflow-x-auto w-full">
@@ -29,7 +27,7 @@ export const UsesResponsiveImages = ({ lighthouse }) =>
                 </tr>
               </thead>
               <tbody>
-                {lighthouse.audits['uses-responsive-images'].details.items.map(
+                {lighthouse.audits['offscreen-images'].details.items.map(
                   item => (
                     <tr className="odd:bg-white">
                       <td className="flex items-center py-2">

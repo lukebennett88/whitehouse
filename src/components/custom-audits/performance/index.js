@@ -6,6 +6,7 @@ import { Interactive } from './interactive';
 import { ScreenshotThumbnails } from './screenshot-thumbnails';
 import { UsesTextCompression } from './uses-text-compression';
 import { UsesResponsiveImages } from './uses-responsive-images';
+import { OffscreenImages } from './offscreen-images';
 
 const PerformanceIndex = ({ lighthouse }) => (
   <article className="bg-indigo-100 my-4 px-4 py-6">
@@ -24,6 +25,7 @@ const PerformanceIndex = ({ lighthouse }) => (
       </h4>
       <UsesTextCompression lighthouse={lighthouse} />
       <UsesResponsiveImages lighthouse={lighthouse} />
+      <OffscreenImages lighthouse={lighthouse} />
     </ul>
   </article>
 );
