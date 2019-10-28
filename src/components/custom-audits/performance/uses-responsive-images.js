@@ -32,14 +32,14 @@ export const UsesResponsiveImages = ({ lighthouse }) =>
                 {lighthouse.audits['uses-responsive-images'].details.items.map(
                   item => (
                     <tr className="odd:bg-white">
-                      <td>
+                      <td className="px-4 py-2">
                         <img
                           src={item.url}
                           alt=""
                           className="h-12 ml-2 object-cover w-12"
                         />
+                        {item.url}
                       </td>
-                      <td className="px-4 py-2">{item.url}</td>
                       <td className="px-4 py-2 text-right whitespace-no-wrap">
                         {commaNumber(item.totalBytes)} kB
                       </td>
