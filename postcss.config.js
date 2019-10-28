@@ -1,23 +1,7 @@
 const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
-const postcssImport = require('postcss-import');
-const purgecss = require('@fullhuman/postcss-purgecss');
 const tailwindcss = require('tailwindcss');
+const postcssImport = require('postcss-import');
 
 module.exports = {
-  plugins: [
-    postcssImport,
-    tailwindcss,
-    ...(process.env.NODE_ENV === `production`
-      ? [
-          purgecss({
-            content: ['./pages/**/*.js', './components/**/*.js'],
-            defaultExtractor: content =>
-              content.match(/[A-Za-z0-9-_:/]+/g) || [],
-          }),
-          autoprefixer,
-          cssnano,
-        ]
-      : []),
-  ],
+  plugins: [postcssImport, tailwindcss, autoprefixer],
 };

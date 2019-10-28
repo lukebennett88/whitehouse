@@ -1,0 +1,22 @@
+/* These classes have lower specificity so we can override them
+   with utility classes */
+
+a:not([class]),
+.highlight {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 70%,
+    theme('colors.indigo.200') 70%
+  );
+  color: theme('colors.indigo.700');
+  @apply font-black inline-block;
+}
+
+a:hover:not([class]),
+.highlight {
+  @apply text-indigo-600;
+}
+
+dt {
+  @apply font-black flex items-center mt-4 text-lg;
+}

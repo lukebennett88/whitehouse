@@ -1,51 +1,56 @@
 {
-  "name": "whitehouse",
+  "name": "gatsby-starter-tailwindcss",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby and Tailwind",
   "version": "0.1.0",
-  "description": "Whitehouse is a tool for white-labelling Lighthouse audits into a report to give to clients.",
-  "main": "index.js",
-  "scripts": {
-    "build": "next build",
-    "dev": "next",
-    "export": "npm run build && next export",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "start": "next start"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lukebennett88/whitehouse.git"
-  },
-  "author": "Luke Bennett",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/lukebennett88/whitehouse/issues"
-  },
-  "homepage": "https://github.com/lukebennett88/whitehouse#readme",
+  "author": "Luke Bennett <hello@lukebennett.com.au>",
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "1.3.0",
-    "@zeit/next-css": "^1.0.1",
-    "autoprefixer": "9.7.0",
-    "cssnano": "4.1.10",
+    "autoprefixer": "^9.7.0",
+    "comma-number": "^2.0.1",
+    "gatsby": "^2.17.4",
+    "gatsby-image": "^2.2.29",
+    "gatsby-plugin-canonical-urls": "^2.1.13",
+    "gatsby-plugin-manifest": "^2.2.23",
+    "gatsby-plugin-netlify": "^2.1.22",
+    "gatsby-plugin-postcss": "^2.1.13",
+    "gatsby-plugin-purgecss": "^4.0.1",
+    "gatsby-plugin-react-helmet": "^3.1.13",
+    "gatsby-plugin-robots-txt": "^1.5.0",
+    "gatsby-plugin-sharp": "^2.2.32",
+    "gatsby-plugin-sitemap": "^2.2.19",
+    "gatsby-source-filesystem": "^2.1.33",
+    "gatsby-transformer-sharp": "^2.3.0",
     "markdown-to-jsx": "^6.10.3",
-    "next": "^9.1.1",
     "postcss-import": "^12.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "tailwindcss": "1.1.3"
+    "react-helmet": "^5.2.1",
+    "react-modal": "^3.11.1",
+    "tailwindcss": "^1.1.3"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.5.1",
+    "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.4.0",
+    "eslint-config-prettier": "^6.5.0",
     "eslint-config-wesbos": "0.0.19",
     "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.2.0",
-    "prettier": "^1.16.4"
+    "prettier": "^1.18.2"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "build:serve": "npm run build && npm run serve",
+    "develop": "gatsby develop --open",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "start": "npm run develop",
+    "serve": "gatsby serve --open"
   }
 }
