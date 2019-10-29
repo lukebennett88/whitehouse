@@ -33,7 +33,10 @@ export const UsesResponsiveImages = ({ lighthouse }) =>
                 {lighthouse.audits['uses-responsive-images'].details.items.map(
                   item => (
                     <tr className="odd:bg-white">
-                      <td className="flex items-center max-w-xl py-2 truncate">
+                      <td
+                        title={item.url}
+                        className="flex items-center max-w-xl py-2 truncate"
+                      >
                         <img
                           src={item.url}
                           alt=""
