@@ -1,8 +1,9 @@
 /* These classes have lower specificity so we can override them
    with utility classes */
 
-a:not([class]),
+/* a:not([class]),
 .highlight {
+  background: transparent;
   background-image: linear-gradient(
     to bottom,
     transparent 70%,
@@ -13,7 +14,18 @@ a:not([class]),
 }
 
 a:hover:not([class]),
+.highlight:hover {
+  @apply text-indigo-600;
+} */
+
+a:not([class]),
 .highlight {
+  text-decoration-skip-ink: auto;
+  @apply font-black inline-block text-indigo-700 underline;
+}
+
+a:hover:not([class]),
+.highlight:hover {
   @apply text-indigo-600;
 }
 
