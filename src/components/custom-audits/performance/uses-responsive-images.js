@@ -10,6 +10,15 @@ export const UsesResponsiveImages = ({ lighthouse }) =>
           <Markdown>
             {lighthouse.audits['uses-responsive-images'].title}
           </Markdown>
+          <span
+            className={`${
+              lighthouse.audits['uses-responsive-images'].numericValue > 2048
+                ? `bg-red-300 text-red-900`
+                : `bg-orange-300 text-orange-900`
+            } font-black inline-block ml-2 px-2 rounded-full text-sm`}
+          >
+            {lighthouse.audits['uses-responsive-images'].displayValue}
+          </span>
         </dt>
         <dd>
           <details>
@@ -32,7 +41,7 @@ export const UsesResponsiveImages = ({ lighthouse }) =>
               <tbody>
                 {lighthouse.audits['uses-responsive-images'].details.items.map(
                   item => (
-                    <tr className="odd:bg-white">
+                    <tr key={item.url} className="odd:bg-white">
                       <td
                         title={item.url}
                         className="flex items-center max-w-xl py-2 truncate"

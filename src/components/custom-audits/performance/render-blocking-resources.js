@@ -10,6 +10,15 @@ export const RenderBlockingResources = ({ lighthouse }) =>
           <Markdown>
             {lighthouse.audits['render-blocking-resources'].title}
           </Markdown>
+          <span
+            className={`${
+              lighthouse.audits['render-blocking-resources'].numericValue > 50
+                ? `bg-red-300 text-red-900`
+                : `bg-orange-300 text-orange-900`
+            } font-black inline-block ml-2 px-2 rounded-full text-sm`}
+          >
+            {lighthouse.audits['render-blocking-resources'].displayValue}
+          </span>
         </dt>
         <dd>
           <details>
@@ -33,7 +42,7 @@ export const RenderBlockingResources = ({ lighthouse }) =>
                 {lighthouse.audits[
                   'render-blocking-resources'
                 ].details.items.map(item => (
-                  <tr className="odd:bg-white">
+                  <tr key={item.url} className="odd:bg-white">
                     <td
                       title={item.url}
                       className="flex items-center max-w-xl py-2 px-4 truncate"
