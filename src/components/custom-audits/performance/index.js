@@ -7,6 +7,7 @@ import { ScreenshotThumbnails } from './screenshot-thumbnails';
 import { UsesTextCompression } from './uses-text-compression';
 import { UsesResponsiveImages } from './uses-responsive-images';
 import { OffscreenImages } from './offscreen-images';
+import { RenderBlockingResources } from './render-blocking-resources';
 
 const PerformanceIndex = ({ lighthouse }) => (
   <article className="bg-indigo-100 my-4 px-4 py-6">
@@ -26,6 +27,7 @@ const PerformanceIndex = ({ lighthouse }) => (
       <UsesTextCompression lighthouse={lighthouse} />
       <UsesResponsiveImages lighthouse={lighthouse} />
       <OffscreenImages lighthouse={lighthouse} />
+      <RenderBlockingResources lighthouse={lighthouse} />
     </ul>
   </article>
 );
