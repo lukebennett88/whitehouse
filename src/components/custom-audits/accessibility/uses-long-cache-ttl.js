@@ -15,6 +15,6 @@ const LogicalTabOrder = ({ lighthouse }) =>
         </dd>
       </dl>
     </li>
-  ));
+  );
 
 export default LogicalTabOrder;
