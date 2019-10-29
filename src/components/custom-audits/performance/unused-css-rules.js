@@ -30,7 +30,7 @@ export const UnusedCSSRules = ({ lighthouse }) =>
               <tbody>
                 {lighthouse.audits['unused-css-rules'].details.items.map(
                   item => (
-                    <tr className="odd:bg-white">
+                    <tr key={item.url} className="odd:bg-white">
                       <td className="flex items-center max-w-xl py-2 px-4 truncate">
                         {item.url}
                       </td>
