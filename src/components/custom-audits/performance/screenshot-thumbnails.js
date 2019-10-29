@@ -16,7 +16,7 @@ export const ScreenshotThumbnails = ({ lighthouse }) =>
             {lighthouse.audits['screenshot-thumbnails'].details.items.map(
               item => (
                 <div className="px-2">
-                  <img src={item.data} alt="Screenshot." />
+                  <img src={item.data} alt="Screenshot." loading="lazy" />
                 </div>
               )
             )}
