@@ -4,7 +4,7 @@ import commaNumber from 'comma-number';
 
 export const RenderBlockingResources = ({ lighthouse }) =>
   lighthouse.audits['render-blocking-resources'].score !== 1 && (
-    <li>
+    <li id="render-blocking-resources">
       <dl>
         <dt>
           <Markdown>

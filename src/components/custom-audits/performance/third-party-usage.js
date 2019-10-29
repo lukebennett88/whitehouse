@@ -3,7 +3,7 @@ import Markdown from 'markdown-to-jsx';
 
 const ThirdPartySummary = ({ lighthouse }) =>
   lighthouse.audits['third-party-summary'].score !== 1 && (
-    <li>
+    <li id="third-party-summary">
       <dl>
         <dt>
           <Markdown>{lighthouse.audits['third-party-summary'].title}</Markdown>

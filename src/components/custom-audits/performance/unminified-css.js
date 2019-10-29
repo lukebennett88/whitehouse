@@ -3,7 +3,7 @@ import Markdown from 'markdown-to-jsx';
 
 const UnminifiedCSS = ({ lighthouse }) =>
   lighthouse.audits['unminified-css'].score !== 1 && (
-    <li>
+    <li id="unminified-css">
       <dl>
         <dt>
           <Markdown>{lighthouse.audits['unminified-css'].title}</Markdown>

@@ -20,7 +20,7 @@ const PerformanceIndex = ({ lighthouse }) => (
       <Interactive lighthouse={lighthouse} />
       <ScreenshotThumbnails lighthouse={lighthouse} />
       <hr className="mt-8" />
-      <h4 className="mt-8 text-xl">
+      <h4 id="opportunities" className="mt-8 text-xl">
         <span className="font-black tracking-wide uppercase">
           Opportunities
         </span>{' '}

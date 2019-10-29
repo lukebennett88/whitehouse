@@ -4,7 +4,7 @@ import commaNumber from 'comma-number';
 
 export const UsesTextCompression = ({ lighthouse }) =>
   lighthouse.audits['uses-text-compression'].score !== 1 && (
-    <li>
+    <li id="uses-text-compression">
       <dl>
         <dt>
           <Markdown>

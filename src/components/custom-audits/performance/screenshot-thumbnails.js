@@ -3,7 +3,7 @@ import Markdown from 'markdown-to-jsx';
 
 export const ScreenshotThumbnails = ({ lighthouse }) =>
   lighthouse.audits['screenshot-thumbnails'].score !== 1 && (
-    <li className="mt-4">
+    <li id="screenshot-thumbnails">
       <dl>
         <dt>
           <Markdown>

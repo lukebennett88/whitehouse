@@ -3,7 +3,7 @@ import Markdown from 'markdown-to-jsx';
 
 export const Interactive = ({ lighthouse }) =>
   lighthouse.audits.interactive.score !== 1 && (
-    <li>
+    <li id="interactive">
       <dl>
         <dt>
           <Markdown>{lighthouse.audits.interactive.title}</Markdown>

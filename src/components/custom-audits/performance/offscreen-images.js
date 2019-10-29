@@ -4,7 +4,7 @@ import commaNumber from 'comma-number';
 
 export const OffscreenImages = ({ lighthouse }) =>
   lighthouse.audits['offscreen-images'].score !== 1 && (
-    <li>
+    <li id="offscreen-images">
       <dl>
         <dt>
           <Markdown>{lighthouse.audits['offscreen-images'].title}</Markdown>

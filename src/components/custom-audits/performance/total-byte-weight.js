@@ -3,7 +3,7 @@ import Markdown from 'markdown-to-jsx';
 
 const TotalByteWeight = ({ lighthouse }) =>
   lighthouse.audits['total-byte-weight'].score !== 1 && (
-    <li>
+    <li id="total-byte-weight">
       <dl>
         <dt>
           <Markdown>{lighthouse.audits['total-byte-weight'].title}</Markdown>

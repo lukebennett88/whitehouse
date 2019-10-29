@@ -3,7 +3,7 @@ import Markdown from 'markdown-to-jsx';
 
 export const FirstMeaningfulPaint = ({ lighthouse }) =>
   lighthouse.audits['first-meaningful-paint'].score !== 1 && (
-    <li className="mt-4">
+    <li id="first-meaningful-paint">
       <dl>
         <dt>
           <Markdown>

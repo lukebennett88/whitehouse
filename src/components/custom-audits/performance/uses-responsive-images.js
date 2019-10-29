@@ -4,7 +4,7 @@ import commaNumber from 'comma-number';
 
 export const UsesResponsiveImages = ({ lighthouse }) =>
   lighthouse.audits['uses-responsive-images'].score !== 1 && (
-    <li>
+    <li id="uses-responsive-images">
       <dl>
         <dt>
           <Markdown>

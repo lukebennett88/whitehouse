@@ -4,7 +4,7 @@ import commaNumber from 'comma-number';
 
 export const UnusedCSSRules = ({ lighthouse }) =>
   lighthouse.audits['unused-css-rules'].score !== 1 && (
-    <li>
+    <li id="unused-css-rules">
       <dl>
         <dt>
           <Markdown>{lighthouse.audits['unused-css-rules'].title}</Markdown>
