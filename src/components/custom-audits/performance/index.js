@@ -8,6 +8,8 @@ import { UsesTextCompression } from './uses-text-compression';
 import { UsesResponsiveImages } from './uses-responsive-images';
 import { OffscreenImages } from './offscreen-images';
 import { RenderBlockingResources } from './render-blocking-resources';
+import { UsesWebpImages } from './uses-webp-images';
+import { UnusedCSSRules } from './unused-css-rules';
 
 const PerformanceIndex = ({ lighthouse }) => (
   <article className="bg-indigo-100 my-4 px-4 py-6">
@@ -28,6 +30,8 @@ const PerformanceIndex = ({ lighthouse }) => (
       <UsesResponsiveImages lighthouse={lighthouse} />
       <OffscreenImages lighthouse={lighthouse} />
       <RenderBlockingResources lighthouse={lighthouse} />
+      <UsesWebpImages lighthouse={lighthouse} />
+      <UnusedCSSRules lighthouse={lighthouse} />
     </ul>
   </article>
 );
