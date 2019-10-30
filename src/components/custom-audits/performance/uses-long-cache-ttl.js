@@ -76,7 +76,7 @@ export const UsesLongCacheTTL = ({ lighthouse }) =>
                                 parseFloat(
                                   Math.round((item.wastedBytes / 1000) * 100) /
                                     100
-                                ).toFixed(2)
+                                ).toFixed(0)
                               )}
                             </span>{' '}
                             KB

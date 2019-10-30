@@ -2,7 +2,7 @@ import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import PropTypes from 'prop-types';
 
-const Audit = ({ audit }) => (
+const Audit = ({ audit, group }) => (
   <li className="mt-4">
     <dl>
       <dt className="flex items-center font-black">
@@ -10,6 +10,7 @@ const Audit = ({ audit }) => (
       </dt>
       <dd>
         <Markdown>{audit.description}</Markdown>
+        <p className="capitalize">{group}</p>
       </dd>
     </dl>
   </li>

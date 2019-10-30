@@ -56,8 +56,8 @@ export const UsesRelPreconnect = ({ lighthouse }) =>
                             <span className="font-mono">
                               {commaNumber(
                                 parseFloat(
-                                  Math.round((item.wastedMs / 1000) * 100) / 100
-                                ).toFixed(2)
+                                  Math.round(item.wastedMs * 100) / 100
+                                ).toFixed(0)
                               )}
                             </span>{' '}
                             ms

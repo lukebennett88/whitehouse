@@ -59,7 +59,7 @@ export const UnminifiedCSS = ({ lighthouse }) =>
                                 parseFloat(
                                   Math.round((item.totalBytes / 1000) * 100) /
                                     100
-                                ).toFixed(2)
+                                ).toFixed(0)
                               )}
                             </span>{' '}
                             KB
@@ -70,7 +70,7 @@ export const UnminifiedCSS = ({ lighthouse }) =>
                                 parseFloat(
                                   Math.round((item.wastedBytes / 1000) * 100) /
                                     100
-                                ).toFixed(2)
+                                ).toFixed(0)
                               )}
                             </span>{' '}
                             KB

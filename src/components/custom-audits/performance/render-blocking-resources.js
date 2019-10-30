@@ -65,7 +65,7 @@ export const RenderBlockingResources = ({ lighthouse }) =>
                             {commaNumber(
                               parseFloat(
                                 Math.round((item.totalBytes / 1000) * 100) / 100
-                              ).toFixed(2)
+                              ).toFixed(0)
                             )}
                           </span>{' '}
                           KB
@@ -74,8 +74,8 @@ export const RenderBlockingResources = ({ lighthouse }) =>
                           <span className="font-mono">
                             {commaNumber(
                               parseFloat(
-                                Math.round((item.wastedMs / 1000) * 100) / 100
-                              ).toFixed(2)
+                                Math.round(item.wastedMs * 100) / 100
+                              ).toFixed(0)
                             )}
                           </span>{' '}
                           ms

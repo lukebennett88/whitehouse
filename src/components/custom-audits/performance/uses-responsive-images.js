@@ -71,7 +71,7 @@ export const UsesResponsiveImages = ({ lighthouse }) =>
                             {commaNumber(
                               parseFloat(
                                 Math.round((item.totalBytes / 1000) * 100) / 100
-                              ).toFixed(2)
+                              ).toFixed(0)
                             )}
                           </span>{' '}
                           KB
@@ -82,7 +82,7 @@ export const UsesResponsiveImages = ({ lighthouse }) =>
                               parseFloat(
                                 Math.round((item.wastedBytes / 1000) * 100) /
                                   100
-                              ).toFixed(2)
+                              ).toFixed(0)
                             )}
                           </span>{' '}
                           KB

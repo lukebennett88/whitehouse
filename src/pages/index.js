@@ -7,8 +7,8 @@ import Accessibility from '../components/accessibility';
 import BestPractices from '../components/best-practices';
 import SEO from '../components/seo';
 
-// import lighthouse from '../data/eastlandtruss.com.au.json';
-import lighthouse from '../data/phirannodesigns.com.au.json';
+import lighthouse from '../data/eastlandtruss.com.au.json';
+// import lighthouse from '../data/phirannodesigns.com.au.json';
 
 const IndexPage = () => (
   <Layout>

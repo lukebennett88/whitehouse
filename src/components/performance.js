@@ -9,7 +9,11 @@ const Performance = ({ lighthouse }) => (
     <ul>
       {Object.values(lighthouse.categories.performance.auditRefs).map(
         auditRef => (
-          <Audit audit={lighthouse.audits[auditRef.id]} key={auditRef.id} />
+          <Audit
+            audit={lighthouse.audits[auditRef.id]}
+            group={auditRef.group}
+            key={auditRef.id}
+          />
         )
       )}
     </ul>
