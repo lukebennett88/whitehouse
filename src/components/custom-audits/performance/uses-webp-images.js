@@ -26,9 +26,11 @@ export const UsesWebpImages = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              <Markdown>
-                {lighthouse.stackPacks[0].descriptions['uses-webp-images']}
-              </Markdown>
+              {lighthouse.stackPacks[0].descriptions['uses-webp-images'] && (
+                <Markdown>
+                  {lighthouse.stackPacks[0].descriptions['uses-webp-images']}
+                </Markdown>
+              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

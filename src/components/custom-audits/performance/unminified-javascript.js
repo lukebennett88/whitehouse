@@ -28,9 +28,17 @@ export const UnminifiedJavascript = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              <Markdown>
-                {lighthouse.stackPacks[0].descriptions['unminified-javascript']}
-              </Markdown>
+              {lighthouse.stackPacks[0].descriptions[
+                'unminified-javascript'
+              ] && (
+                <Markdown>
+                  {
+                    lighthouse.stackPacks[0].descriptions[
+                      'unminified-javascript'
+                    ]
+                  }
+                </Markdown>
+              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

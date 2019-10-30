@@ -26,9 +26,11 @@ export const BootupTime = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              <Markdown>
-                {lighthouse.stackPacks[0].descriptions['unused-css-rules']}
-              </Markdown>
+              {lighthouse.stackPacks[0].descriptions['unused-css-rules'] && (
+                <Markdown>
+                  {lighthouse.stackPacks[0].descriptions['unused-css-rules']}
+                </Markdown>
+              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>
