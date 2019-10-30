@@ -2,33 +2,33 @@ import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import commaNumber from 'comma-number';
 
-export const UsesRelPreconnect = ({ lighthouse }) =>
-  lighthouse.audits['uses-rel-preconnect'].score !== 1 && (
-    <li id="uses-rel-preconnect">
+export const FontDisplay = ({ lighthouse }) =>
+  lighthouse.audits['font-display'].score !== 1 && (
+    <li id="font-display">
       <dl>
         <dt>
-          <Markdown>{lighthouse.audits['uses-rel-preconnect'].title}</Markdown>
+          <Markdown>{lighthouse.audits['font-display'].title}</Markdown>
           <span
             className={`${
-              lighthouse.audits['uses-rel-preconnect'].score < 0.5
+              lighthouse.audits['font-display'].score < 0.5
                 ? `bg-red-300 text-red-900`
                 : `bg-orange-300 text-orange-900`
             } font-black inline-block ml-2 px-2 rounded-full text-sm`}
           >
-            {lighthouse.audits['uses-rel-preconnect'].displayValue}
+            {lighthouse.audits['font-display'].displayValue}
           </span>
         </dt>
         <dd>
           <details>
             <summary>
               <Markdown>
-                {lighthouse.audits['uses-rel-preconnect'].description}
+                {lighthouse.audits['font-display'].description}
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['uses-rel-preconnect'] && (
+              {lighthouse.stackPacks[0].descriptions['font-display'] && (
                 <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['uses-rel-preconnect']}
+                  {lighthouse.stackPacks[0].descriptions['font-display']}
                 </Markdown>
               )}
               <div className="overflow-x-auto">
@@ -43,7 +43,7 @@ export const UsesRelPreconnect = ({ lighthouse }) =>
                     </tr>
                   </thead>
                   <tbody>
-                    {lighthouse.audits['uses-rel-preconnect'].details.items.map(
+                    {lighthouse.audits['font-display'].details.items.map(
                       item => (
                         <tr key={item.url} className="odd:bg-white">
                           <td

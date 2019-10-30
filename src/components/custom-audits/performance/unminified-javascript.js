@@ -57,10 +57,25 @@ export const UnminifiedJavascript = ({ lighthouse }) =>
                           {item.url}
                         </td>
                         <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
-                          {commaNumber(item.totalBytes / 1000)} KB
+                          <span className="font-mono">
+                            {commaNumber(
+                              parseFloat(
+                                Math.round((item.totalBytes / 1000) * 100) / 100
+                              ).toFixed(2)
+                            )}
+                          </span>{' '}
+                          KB
                         </td>
                         <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
-                          {commaNumber(item.wastedBytes / 1000)} KB
+                          <span className="font-mono">
+                            {commaNumber(
+                              parseFloat(
+                                Math.round((item.wastedBytes / 1000) * 100) /
+                                  100
+                              ).toFixed(2)
+                            )}
+                          </span>{' '}
+                          KB
                         </td>
                       </tr>
                     ))}

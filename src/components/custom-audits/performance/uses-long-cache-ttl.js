@@ -53,10 +53,33 @@ export const UsesLongCacheTTL = ({ lighthouse }) =>
                             {item.url}
                           </td>
                           <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
-                            {commaNumber(item.totalBytes / 1000)} KB
+                            {item.cacheLifetimeMs === 0 ? (
+                              'None'
+                            ) : (
+                              <>
+                                <span className="font-mono">
+                                  {commaNumber(
+                                    parseFloat(
+                                      Math.round(
+                                        (item.cacheLifetimeMs / 1000) * 100
+                                      ) / 100
+                                    ).toFixed(0)
+                                  )}
+                                </span>{' '}
+                                ms
+                              </>
+                            )}
                           </td>
                           <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
-                            {commaNumber(item.wastedMs)} ms
+                            <span className="font-mono">
+                              {commaNumber(
+                                parseFloat(
+                                  Math.round((item.wastedBytes / 1000) * 100) /
+                                    100
+                                ).toFixed(2)
+                              )}
+                            </span>{' '}
+                            KB
                           </td>
                         </tr>
                       )

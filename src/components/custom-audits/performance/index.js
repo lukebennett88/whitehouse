@@ -14,6 +14,7 @@ import { UnminifiedJavascript } from './unminified-javascript';
 import { UnminifiedCSS } from './unminified-css';
 import { UsesRelPreconnect } from './uses-rel-preconnect';
 import { UsesLongCacheTTL } from './uses-long-cache-ttl';
+import { FontDisplay } from './font-display';
 
 const PerformanceIndex = ({ lighthouse }) => (
   <article className="bg-indigo-100 my-4 px-4 py-6">
@@ -59,6 +60,7 @@ const PerformanceIndex = ({ lighthouse }) => (
             — More information about the performance of your website.
           </h4>
           <UsesLongCacheTTL lighthouse={lighthouse} />
+          <FontDisplay lighthouse={lighthouse} />
         </>
       )}
     </ul>
