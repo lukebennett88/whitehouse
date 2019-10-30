@@ -10,6 +10,7 @@ import { OffscreenImages } from './offscreen-images';
 import { RenderBlockingResources } from './render-blocking-resources';
 import { UsesWebpImages } from './uses-webp-images';
 import { UnusedCSSRules } from './unused-css-rules';
+import { UnminifiedJavascript } from './unminified-javascript';
 
 const PerformanceIndex = ({ lighthouse }) => (
   <article className="bg-indigo-100 my-4 px-4 py-6">
@@ -19,19 +20,27 @@ const PerformanceIndex = ({ lighthouse }) => (
       <FirstMeaningfulPaint lighthouse={lighthouse} />
       <Interactive lighthouse={lighthouse} />
       <ScreenshotThumbnails lighthouse={lighthouse} />
-      <hr className="mt-8" />
-      <h4 id="opportunities" className="mt-8 text-xl">
-        <span className="font-black tracking-wide uppercase">
-          Opportunities
-        </span>{' '}
-        — These suggestions can help your page load faster.
-      </h4>
-      <UsesTextCompression lighthouse={lighthouse} />
-      <UsesResponsiveImages lighthouse={lighthouse} />
-      <OffscreenImages lighthouse={lighthouse} />
-      <RenderBlockingResources lighthouse={lighthouse} />
-      <UsesWebpImages lighthouse={lighthouse} />
-      <UnusedCSSRules lighthouse={lighthouse} />
+      {/* Check if there are any audits with the type of opportunity and only show those audits if true */}
+      {Object.values(lighthouse.audits).some(
+        audit => audit.details && audit.details.type === 'opportunity'
+      ) && (
+        <>
+          <hr className="mt-8" />
+          <h4 id="opportunities" className="mt-8 text-xl">
+            <span className="font-black tracking-wide uppercase">
+              Opportunities
+            </span>{' '}
+            — These suggestions can help your page load faster.
+          </h4>
+          <UsesTextCompression lighthouse={lighthouse} />
+          <UsesResponsiveImages lighthouse={lighthouse} />
+          <OffscreenImages lighthouse={lighthouse} />
+          <RenderBlockingResources lighthouse={lighthouse} />
+          <UsesWebpImages lighthouse={lighthouse} />
+          <UnusedCSSRules lighthouse={lighthouse} />
+          <UnminifiedJavascript lighthouse={lighthouse} />
+        </>
+      )}
     </ul>
   </article>
 );

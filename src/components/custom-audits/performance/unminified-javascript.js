@@ -2,38 +2,34 @@ import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import commaNumber from 'comma-number';
 
-export const RenderBlockingResources = ({ lighthouse }) =>
-  lighthouse.audits['render-blocking-resources'].score !== 1 && (
-    <li id="render-blocking-resources">
+export const UnminifiedJavascript = ({ lighthouse }) =>
+  lighthouse.audits['unminified-javascript'].score !== 1 && (
+    <li id="unminified-javascript">
       <dl>
         <dt>
           <Markdown>
-            {lighthouse.audits['render-blocking-resources'].title}
+            {lighthouse.audits['unminified-javascript'].title}
           </Markdown>
           <span
             className={`${
-              lighthouse.audits['render-blocking-resources'].score < 0.5
+              lighthouse.audits['unminified-javascript'].score < 0.5
                 ? `bg-red-300 text-red-900`
                 : `bg-orange-300 text-orange-900`
             } font-black inline-block ml-2 px-2 rounded-full text-sm`}
           >
-            {lighthouse.audits['render-blocking-resources'].displayValue}
+            {lighthouse.audits['unminified-javascript'].displayValue}
           </span>
         </dt>
         <dd>
           <details>
             <summary>
               <Markdown>
-                {lighthouse.audits['render-blocking-resources'].description}
+                {lighthouse.audits['unminified-javascript'].description}
               </Markdown>
             </summary>
             <div className="mt-4">
               <Markdown>
-                {
-                  lighthouse.stackPacks[0].descriptions[
-                    'render-blocking-resources'
-                  ]
-                }
+                {lighthouse.stackPacks[0].descriptions['unminified-javascript']}
               </Markdown>
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
@@ -51,7 +47,7 @@ export const RenderBlockingResources = ({ lighthouse }) =>
                   </thead>
                   <tbody>
                     {lighthouse.audits[
-                      'render-blocking-resources'
+                      'unminified-javascript'
                     ].details.items.map(item => (
                       <tr key={item.url} className="odd:bg-white">
                         <td
