@@ -33,10 +33,10 @@ import { ThirdPartySummary } from './third-party-summary';
 
 const PerformanceIndex = ({ lighthouse }) => {
   let colors = `bg-green-300 text-green-900`;
-  if (lighthouse.categories.performance.score < 90) {
+  if (lighthouse.categories.performance.score < 0.9) {
     colors = `bg-orange-300 text-orange-900`;
   }
-  if (lighthouse.categories.performance.score < 50) {
+  if (lighthouse.categories.performance.score < 0.5) {
     colors = `bg-red-300 text-red-900`;
   }
   return (
@@ -45,7 +45,9 @@ const PerformanceIndex = ({ lighthouse }) => {
       <span
         className={`${colors} flex font-black h-24 items-center justify-center mt-4 rounded-full text-4xl w-24`}
       >
-        {lighthouse.categories.performance.score * 100}
+        {parseFloat(
+          Math.round(lighthouse.categories.performance.score * 100 * 100) / 100
+        ).toFixed(0)}
       </span>
       <h4 className="font-black mt-8 text-xl tracking-wide uppercase">
         Metrics
