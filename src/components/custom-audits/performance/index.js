@@ -11,6 +11,9 @@ import { RenderBlockingResources } from './render-blocking-resources';
 import { UsesWebpImages } from './uses-webp-images';
 import { UnusedCSSRules } from './unused-css-rules';
 import { UnminifiedJavascript } from './unminified-javascript';
+import { UnminifiedCSS } from './unminified-css';
+import { UsesRelPreconnect } from './uses-rel-preconnect';
+import { UsesLongCacheTTL } from './uses-long-cache-ttl';
 
 const PerformanceIndex = ({ lighthouse }) => (
   <article className="bg-indigo-100 my-4 px-4 py-6">
@@ -39,6 +42,23 @@ const PerformanceIndex = ({ lighthouse }) => (
           <UsesWebpImages lighthouse={lighthouse} />
           <UnusedCSSRules lighthouse={lighthouse} />
           <UnminifiedJavascript lighthouse={lighthouse} />
+          <UnminifiedCSS lighthouse={lighthouse} />
+          <UsesRelPreconnect lighthouse={lighthouse} />
+        </>
+      )}
+      {/* Check if there are any audits with the type of opportunity and only show those audits if true */}
+      {lighthouse.categories.performance.auditRefs.some(
+        audit => audit.group && audit.group === 'diagnostics'
+      ) && (
+        <>
+          <hr className="mt-8" />
+          <h4 id="opportunities" className="mt-8 text-xl">
+            <span className="font-black tracking-wide uppercase">
+              Diagnostics
+            </span>{' '}
+            — More information about the performance of your website.
+          </h4>
+          <UsesLongCacheTTL lighthouse={lighthouse} />
         </>
       )}
     </ul>

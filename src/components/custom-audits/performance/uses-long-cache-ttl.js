@@ -2,32 +2,32 @@ import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import commaNumber from 'comma-number';
 
-export const UnusedCSSRules = ({ lighthouse }) =>
-  lighthouse.audits['unused-css-rules'].score !== 1 && (
-    <li id="unused-css-rules">
+export const UsesLongCacheTTL = ({ lighthouse }) =>
+  lighthouse.audits['uses-long-cache-ttl'].score !== 1 && (
+    <li id="uses-long-cache-ttl">
       <dl>
         <dt>
-          <Markdown>{lighthouse.audits['unused-css-rules'].title}</Markdown>
+          <Markdown>{lighthouse.audits['uses-long-cache-ttl'].title}</Markdown>
           <span
             className={`${
-              lighthouse.audits['unused-css-rules'].score < 0.5
+              lighthouse.audits['uses-long-cache-ttl'].score < 0.5
                 ? `bg-red-300 text-red-900`
                 : `bg-orange-300 text-orange-900`
             } font-black inline-block ml-2 px-2 rounded-full text-sm`}
           >
-            {lighthouse.audits['unused-css-rules'].displayValue}
+            {lighthouse.audits['uses-long-cache-ttl'].displayValue}
           </span>
         </dt>
         <dd>
           <details>
             <summary>
               <Markdown>
-                {lighthouse.audits['unused-css-rules'].description}
+                {lighthouse.audits['uses-long-cache-ttl'].description}
               </Markdown>
             </summary>
             <div className="mt-4">
               <Markdown>
-                {lighthouse.stackPacks[0].descriptions['unused-css-rules']}
+                {lighthouse.stackPacks[0].descriptions['uses-long-cache-ttl']}
               </Markdown>
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
@@ -35,26 +35,28 @@ export const UnusedCSSRules = ({ lighthouse }) =>
                     <tr>
                       <th className="font-black px-4 py-2">URL</th>
                       <th className="font-black px-4 py-2 text-right w-20">
-                        Size
+                        Cache TTL
                       </th>
                       <th className="font-black px-4 py-2 text-right w-20">
-                        Potential
-                        <br /> Savings
+                        Size
                       </th>
                     </tr>
                   </thead>
                   <tbody>
-                    {lighthouse.audits['unused-css-rules'].details.items.map(
+                    {lighthouse.audits['uses-long-cache-ttl'].details.items.map(
                       item => (
                         <tr key={item.url} className="odd:bg-white">
-                          <td className="flex items-center max-w-xl py-2 px-4 truncate">
+                          <td
+                            title={item.url}
+                            className="flex items-center max-w-xl py-2 px-4 truncate"
+                          >
                             {item.url}
                           </td>
                           <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
                             {commaNumber(item.totalBytes / 1000)} KB
                           </td>
                           <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
-                            {commaNumber(item.wastedBytes / 1000)} KB
+                            {commaNumber(item.wastedMs)} ms
                           </td>
                         </tr>
                       )

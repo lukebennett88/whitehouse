@@ -60,10 +60,10 @@ export const UsesWebpImages = ({ lighthouse }) =>
                             {item.url}
                           </td>
                           <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
-                            {commaNumber(item.totalBytes)} KB
+                            {commaNumber(item.totalBytes / 1000)} KB
                           </td>
                           <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
-                            {commaNumber(item.wastedBytes)} KB
+                            {commaNumber(item.wastedBytes / 1000)} KB
                           </td>
                         </tr>
                       )
