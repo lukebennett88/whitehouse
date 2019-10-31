@@ -56,19 +56,20 @@ const PerformanceIndex = ({ lighthouse }) => {
         <FirstMeaningfulPaint lighthouse={lighthouse} />
         <Interactive lighthouse={lighthouse} />
         <ScreenshotThumbnails lighthouse={lighthouse} />
-
-        {/* Check if there are any audits with the type of opportunity and only show those audits if true */}
-        {Object.values(lighthouse.audits).some(
-          audit => audit.details && audit.details.type === 'opportunity'
-        ) && (
-          <>
-            <hr className="mt-8" />
-            <h4 id="opportunities" className="mt-8 text-xl">
-              <span className="font-black tracking-wide uppercase">
-                Opportunities
-              </span>{' '}
-              — These suggestions can help your page load faster.
-            </h4>
+      </ul>
+      {/* Check if there are any audits with the type of opportunity and only show those audits if true */}
+      {Object.values(lighthouse.audits).some(
+        audit => audit.details && audit.details.type === 'opportunity'
+      ) && (
+        <>
+          <hr className="mt-8" />
+          <h4 id="opportunities" className="mt-8 text-xl">
+            <span className="font-black tracking-wide uppercase">
+              Opportunities
+            </span>{' '}
+            — These suggestions can help your page load faster.
+          </h4>
+          <ul>
             <RenderBlockingResources lighthouse={lighthouse} />
             <UsesResponsiveImages lighthouse={lighthouse} />
             <OffscreenImages lighthouse={lighthouse} />
@@ -82,29 +83,31 @@ const PerformanceIndex = ({ lighthouse }) => {
             <Redirects lighthouse={lighthouse} />
             <UsesRelPreload lighthouse={lighthouse} />
             <EfficientAnimatedContent lighthouse={lighthouse} />
-          </>
-        )}
-        {/* Check if there are any audits with the type of opportunity and only show those audits if true */}
-        {lighthouse.categories.performance.auditRefs.some(
-          audit => audit.group && audit.group === 'diagnostics'
-        ) && (
-          <>
-            <hr className="mt-8" />
-            <h4 id="opportunities" className="mt-8 text-xl">
-              <span className="font-black tracking-wide uppercase">
-                Diagnostics
-              </span>{' '}
-              — More information about the performance of your website.
-            </h4>
+          </ul>
+        </>
+      )}
+      {/* Check if there are any audits with the type of opportunity and only show those audits if true */}
+      {lighthouse.categories.performance.auditRefs.some(
+        audit => audit.group && audit.group === 'diagnostics'
+      ) && (
+        <>
+          <hr className="mt-8" />
+          <h4 id="opportunities" className="mt-8 text-xl">
+            <span className="font-black tracking-wide uppercase">
+              Diagnostics
+            </span>{' '}
+            — More information about the performance of your website.
+          </h4>
+          <ul>
             <TotalByteWeight lighthouse={lighthouse} />
             <UsesLongCacheTTL lighthouse={lighthouse} />
             <BootupTime lighthouse={lighthouse} />
             <MainthreadWorkBreakdown lighthouse={lighthouse} />
             <FontDisplay lighthouse={lighthouse} />
             <ThirdPartySummary lighthouse={lighthouse} />
-          </>
-        )}
-      </ul>
+          </ul>
+        </>
+      )}
     </article>
   );
 };

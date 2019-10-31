@@ -1,39 +1,71 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
 
-const ColorContrast = ({ lighthouse }) =>
+export const ColorContrast = ({ lighthouse }) =>
   lighthouse.audits['color-contrast'].score !== 1 && (
-    <li>
+    <li id="color-contrast">
       <dl>
         <dt>
           <Markdown>{lighthouse.audits['color-contrast'].title}</Markdown>
+          <span
+            className={`${
+              lighthouse.audits['color-contrast'].score < 0.5
+                ? `bg-red-300 text-red-900`
+                : `bg-orange-300 text-orange-900`
+            } font-black inline-block ml-2 px-2 rounded-full text-sm`}
+          >
+            {lighthouse.audits['color-contrast'].displayValue}
+          </span>
         </dt>
         <dd>
-          <Markdown>{lighthouse.audits['color-contrast'].description}</Markdown>
-          <div className="bg-indigo-200 mt-4 px-4 py-6 rounded">
-            <h3 className="font-black uppercase text-sm tracking-wide">
-              {lighthouse.audits['color-contrast'].details.headings[0].text}
-            </h3>
-            {lighthouse.audits['color-contrast'].details.items.map(item => (
-              <div
-                className="bg-indigo-100 mt-4 p-4 rounded"
-                key={item.node.path}
-              >
-                <h4>
-                  <Markdown>{item.node.nodeLabel}</Markdown>
-                </h4>
-                <pre className="bg-white font-black mt-4 overflow-x-auto px-4 py-2 rounded text-indigo-800">
-                  <code>{item.node.snippet}</code>
-                </pre>
-                <div className="mt-4">
-                  <Markdown>{item.node.explanation}</Markdown>
-                </div>
+          <details>
+            <summary>
+              <Markdown>
+                {lighthouse.audits['color-contrast'].description}
+              </Markdown>
+            </summary>
+            <div className="mt-4">
+              {lighthouse.stackPacks[0].descriptions['color-contrast'] && (
+                <Markdown>
+                  {lighthouse.stackPacks[0].descriptions['color-contrast']}
+                </Markdown>
+              )}
+              <div className="overflow-x-auto">
+                <table className="mt-2 w-full">
+                  <thead>
+                    <tr>
+                      <th className="font-black px-4 py-2">Failing Elements</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {lighthouse.audits['color-contrast'].details.items.map(
+                      item => (
+                        <tr key={item.path} className="odd:bg-white">
+                          <td
+                            title={item.selector}
+                            className="flex items-center py-2 px-4"
+                          >
+                            <div className="mt-2">
+                              <div>{item.node.explanation}</div>
+                              <div className="bg-indigo-200 my-2 p-4 rounded">
+                                <p className="font-black">
+                                  {item.node.nodeLabel}
+                                </p>
+                                <code className="font-black text-indigo-800 w-full">
+                                  {item.node.snippet}
+                                </code>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      )
+                    )}
+                  </tbody>
+                </table>
               </div>
-            ))}
-          </div>
+            </div>
+          </details>
         </dd>
       </dl>
     </li>
   );
-
-export default ColorContrast;

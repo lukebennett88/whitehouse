@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import Meta from '../components/meta';
 import Performance from '../components/custom-audits/performance';
-import Accessibility from '../components/accessibility';
+import Accessibility from '../components/custom-audits/accessibility';
 import BestPractices from '../components/best-practices';
 import SEO from '../components/seo';
 
