@@ -45,8 +45,10 @@ export const UsesLongCacheTTL = ({ lighthouse }) =>
                     </tr>
                   </thead>
                   <tbody>
-                    {lighthouse.audits['uses-long-cache-ttl'].details.items.map(
-                      item => (
+                    {lighthouse.audits['uses-long-cache-ttl'].details &&
+                      lighthouse.audits[
+                        'uses-long-cache-ttl'
+                      ].details.items.map(item => (
                         <tr key={item.url} className="odd:bg-white">
                           <td
                             title={item.url}
@@ -84,8 +86,7 @@ export const UsesLongCacheTTL = ({ lighthouse }) =>
                             KB
                           </td>
                         </tr>
-                      )
-                    )}
+                      ))}
                   </tbody>
                 </table>
               </div>

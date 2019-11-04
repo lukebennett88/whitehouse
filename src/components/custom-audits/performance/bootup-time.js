@@ -51,46 +51,47 @@ export const BootupTime = ({ lighthouse }) =>
                     </tr>
                   </thead>
                   <tbody>
-                    {lighthouse.audits['bootup-time'].details.items.map(
-                      item => (
-                        <tr key={item.url} className="odd:bg-white">
-                          <td className="flex items-center max-w-xl py-2 px-4 truncate">
-                            {item.url}
-                          </td>
-                          <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
-                            <span className="font-mono">
-                              {commaNumber(
-                                parseFloat(
-                                  Math.round(item.total * 100) / 100
-                                ).toFixed(0)
-                              )}
-                            </span>{' '}
-                            KB
-                          </td>
-                          <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
-                            <span className="font-mono">
-                              {commaNumber(
-                                parseFloat(
-                                  Math.round(item.scripting * 100) / 100
-                                ).toFixed(0)
-                              )}
-                            </span>{' '}
-                            KB
-                          </td>
-                          <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
-                            <span className="font-mono">
-                              {commaNumber(
-                                parseFloat(
-                                  Math.round(item.scriptParseCompile * 100) /
-                                    100
-                                ).toFixed(0)
-                              )}
-                            </span>{' '}
-                            KB
-                          </td>
-                        </tr>
-                      )
-                    )}
+                    {lighthouse.audits['bootup-time'].details &&
+                      lighthouse.audits['bootup-time'].details.items.map(
+                        item => (
+                          <tr key={item.url} className="odd:bg-white">
+                            <td className="flex items-center max-w-xl py-2 px-4 truncate">
+                              {item.url}
+                            </td>
+                            <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
+                              <span className="font-mono">
+                                {commaNumber(
+                                  parseFloat(
+                                    Math.round(item.total * 100) / 100
+                                  ).toFixed(0)
+                                )}
+                              </span>{' '}
+                              KB
+                            </td>
+                            <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
+                              <span className="font-mono">
+                                {commaNumber(
+                                  parseFloat(
+                                    Math.round(item.scripting * 100) / 100
+                                  ).toFixed(0)
+                                )}
+                              </span>{' '}
+                              KB
+                            </td>
+                            <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
+                              <span className="font-mono">
+                                {commaNumber(
+                                  parseFloat(
+                                    Math.round(item.scriptParseCompile * 100) /
+                                      100
+                                  ).toFixed(0)
+                                )}
+                              </span>{' '}
+                              KB
+                            </td>
+                          </tr>
+                        )
+                      )}
                   </tbody>
                 </table>
               </div>

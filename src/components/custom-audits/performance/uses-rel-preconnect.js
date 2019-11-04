@@ -43,8 +43,10 @@ export const UsesRelPreconnect = ({ lighthouse }) =>
                     </tr>
                   </thead>
                   <tbody>
-                    {lighthouse.audits['uses-rel-preconnect'].details.items.map(
-                      item => (
+                    {lighthouse.audits['uses-rel-preconnect'].details &&
+                      lighthouse.audits[
+                        'uses-rel-preconnect'
+                      ].details.items.map(item => (
                         <tr key={item.url} className="odd:bg-white">
                           <td
                             title={item.url}
@@ -63,8 +65,7 @@ export const UsesRelPreconnect = ({ lighthouse }) =>
                             ms
                           </td>
                         </tr>
-                      )
-                    )}
+                      ))}
                   </tbody>
                 </table>
               </div>

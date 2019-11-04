@@ -50,25 +50,26 @@ export const MainthreadWorkBreakdown = ({ lighthouse }) =>
                     </tr>
                   </thead>
                   <tbody>
-                    {lighthouse.audits[
-                      'mainthread-work-breakdown'
-                    ].details.items.map(item => (
-                      <tr key={item.groupLabel} className="odd:bg-white">
-                        <td className="flex items-center max-w-xl py-2 px-4 truncate">
-                          {item.groupLabel}
-                        </td>
-                        <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
-                          <span className="font-mono">
-                            {commaNumber(
-                              parseFloat(
-                                Math.round(item.duration * 100) / 100
-                              ).toFixed(0)
-                            )}
-                          </span>{' '}
-                          ms
-                        </td>
-                      </tr>
-                    ))}
+                    {lighthouse.audits['mainthread-work-breakdown'].details &&
+                      lighthouse.audits[
+                        'mainthread-work-breakdown'
+                      ].details.items.map(item => (
+                        <tr key={item.groupLabel} className="odd:bg-white">
+                          <td className="flex items-center max-w-xl py-2 px-4 truncate">
+                            {item.groupLabel}
+                          </td>
+                          <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
+                            <span className="font-mono">
+                              {commaNumber(
+                                parseFloat(
+                                  Math.round(item.duration * 100) / 100
+                                ).toFixed(0)
+                              )}
+                            </span>{' '}
+                            ms
+                          </td>
+                        </tr>
+                      ))}
                   </tbody>
                 </table>
               </div>

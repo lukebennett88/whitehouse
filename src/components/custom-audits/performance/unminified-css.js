@@ -46,40 +46,42 @@ export const UnminifiedCSS = ({ lighthouse }) =>
                     </tr>
                   </thead>
                   <tbody>
-                    {lighthouse.audits['unminified-css'].details.items.map(
-                      item => (
-                        <tr key={item.url} className="odd:bg-white">
-                          <td
-                            title={item.url}
-                            className="flex items-center max-w-xl py-2 px-4 truncate"
-                          >
-                            {item.url}
-                          </td>
-                          <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
-                            <span className="font-mono">
-                              {commaNumber(
-                                parseFloat(
-                                  Math.round((item.totalBytes / 1000) * 100) /
-                                    100
-                                ).toFixed(0)
-                              )}
-                            </span>{' '}
-                            KB
-                          </td>
-                          <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
-                            <span className="font-mono">
-                              {commaNumber(
-                                parseFloat(
-                                  Math.round((item.wastedBytes / 1000) * 100) /
-                                    100
-                                ).toFixed(0)
-                              )}
-                            </span>{' '}
-                            KB
-                          </td>
-                        </tr>
-                      )
-                    )}
+                    {lighthouse.audits['unminified-css'].details &&
+                      lighthouse.audits['unminified-css'].details.items.map(
+                        item => (
+                          <tr key={item.url} className="odd:bg-white">
+                            <td
+                              title={item.url}
+                              className="flex items-center max-w-xl py-2 px-4 truncate"
+                            >
+                              {item.url}
+                            </td>
+                            <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
+                              <span className="font-mono">
+                                {commaNumber(
+                                  parseFloat(
+                                    Math.round((item.totalBytes / 1000) * 100) /
+                                      100
+                                  ).toFixed(0)
+                                )}
+                              </span>{' '}
+                              KB
+                            </td>
+                            <td className="px-4 py-2 text-right whitespace-no-wrap w-20">
+                              <span className="font-mono">
+                                {commaNumber(
+                                  parseFloat(
+                                    Math.round(
+                                      (item.wastedBytes / 1000) * 100
+                                    ) / 100
+                                  ).toFixed(0)
+                                )}
+                              </span>{' '}
+                              KB
+                            </td>
+                          </tr>
+                        )
+                      )}
                   </tbody>
                 </table>
               </div>
