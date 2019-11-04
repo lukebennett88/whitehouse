@@ -9,7 +9,7 @@ const A11yColorContrast = ({ lighthouse }) =>
   ) && (
     <>
       <hr className="mt-8" />
-      <h4 id="opportunities" className="mt-8 text-xl">
+      <h4 id="a11y-color-contrast" className="mt-8 text-xl">
         <span className="font-black tracking-wide uppercase">Contrast</span> —
         These are opportunities to improve the legibility of your content.
       </h4>

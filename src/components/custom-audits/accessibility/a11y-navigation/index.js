@@ -11,7 +11,7 @@ const A11yNavigation = ({ lighthouse }) =>
   ) && (
     <>
       <hr className="mt-8" />
-      <h4 id="opportunities" className="mt-8 text-xl">
+      <h4 id="a11y-navigation" className="mt-8 text-xl">
         <span className="font-black tracking-wide uppercase">Navigation</span> —
         These are opportunities to improve keyboard navigation in your
         application.

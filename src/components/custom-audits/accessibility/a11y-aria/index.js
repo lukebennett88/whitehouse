@@ -15,7 +15,7 @@ const A11yAria = ({ lighthouse }) =>
   ) && (
     <>
       <hr className="mt-8" />
-      <h4 id="opportunities" className="mt-8 text-xl">
+      <h4 id="a11y-aria" className="mt-8 text-xl">
         <span className="font-black tracking-wide uppercase">ARIA</span> — These
         are opportunities to improve the usage of ARIA in your application which
         may enhance the experience for users of assistive technology, like a

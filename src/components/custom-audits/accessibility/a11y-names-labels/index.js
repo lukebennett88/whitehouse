@@ -16,7 +16,7 @@ const A11yNamesLabels = ({ lighthouse }) =>
   ) && (
     <>
       <hr className="mt-8" />
-      <h4 id="opportunities" className="mt-8 text-xl">
+      <h4 id="a11y-names-labels" className="mt-8 text-xl">
         <span className="font-black tracking-wide uppercase">
           Names and labels
         </span>{' '}
