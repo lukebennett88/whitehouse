@@ -2,7 +2,8 @@ import React from 'react';
 import Markdown from 'markdown-to-jsx';
 
 export const ColorContrast = ({ lighthouse }) =>
-  lighthouse.audits['color-contrast'].score !== 1 && (
+  lighthouse.audits['color-contrast'].score !== 1 &&
+  lighthouse.audits['color-contrast'].score !== null && (
     <li id="color-contrast">
       <dl>
         <dt>

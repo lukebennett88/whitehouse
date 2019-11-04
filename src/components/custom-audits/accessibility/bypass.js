@@ -2,7 +2,8 @@ import React from 'react';
 import Markdown from 'markdown-to-jsx';
 
 export const Bypass = ({ lighthouse }) =>
-  lighthouse.audits.bypass.score !== 1 && (
+  lighthouse.audits.bypass.score !== 1 &&
+  lighthouse.audits.bypass.score !== null && (
     <li id="bypass">
       <dl>
         <dt>

@@ -1,34 +1,32 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
 
-export const DuplicateID = ({ lighthouse }) =>
-  lighthouse.audits['duplicate-id'].score !== 1 &&
-  lighthouse.audits['duplicate-id'].score !== null && (
-    <li id="duplicate-id">
+export const ObjectAlt = ({ lighthouse }) =>
+  lighthouse.audits['object-alt'].score !== 1 &&
+  lighthouse.audits['object-alt'].score !== null && (
+    <li id="object-alt">
       <dl>
         <dt>
-          <Markdown>{lighthouse.audits['duplicate-id'].title}</Markdown>
+          <Markdown>{lighthouse.audits['object-alt'].title}</Markdown>
           <span
             className={`${
-              lighthouse.audits['duplicate-id'].score < 0.5
+              lighthouse.audits['object-alt'].score < 0.5
                 ? `bg-red-300 text-red-900`
                 : `bg-orange-300 text-orange-900`
             } font-black inline-block ml-2 px-2 rounded-full text-sm`}
           >
-            {lighthouse.audits['duplicate-id'].displayValue}
+            {lighthouse.audits['object-alt'].displayValue}
           </span>
         </dt>
         <dd>
           <details>
             <summary>
-              <Markdown>
-                {lighthouse.audits['duplicate-id'].description}
-              </Markdown>
+              <Markdown>{lighthouse.audits['object-alt'].description}</Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['duplicate-id'] && (
+              {lighthouse.stackPacks[0].descriptions['object-alt'] && (
                 <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['duplicate-id']}
+                  {lighthouse.stackPacks[0].descriptions['object-alt']}
                 </Markdown>
               )}
               <div className="overflow-x-auto">
@@ -39,8 +37,8 @@ export const DuplicateID = ({ lighthouse }) =>
                     </tr>
                   </thead>
                   <tbody>
-                    {lighthouse.audits['duplicate-id'].details &&
-                      lighthouse.audits['duplicate-id'].details.items.map(
+                    {lighthouse.audits['object-alt'].details &&
+                      lighthouse.audits['object-alt'].details.items.map(
                         item => (
                           <tr key={item.path} className="odd:bg-white">
                             <td

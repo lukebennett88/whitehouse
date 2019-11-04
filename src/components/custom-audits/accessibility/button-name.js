@@ -2,7 +2,8 @@ import React from 'react';
 import Markdown from 'markdown-to-jsx';
 
 export const ButtonName = ({ lighthouse }) =>
-  lighthouse.audits['button-name'].score !== 1 && (
+  lighthouse.audits['button-name'].score !== 1 &&
+  lighthouse.audits['button-name'].score !== null && (
     <li id="button-name">
       <dl>
         <dt>

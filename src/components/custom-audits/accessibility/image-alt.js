@@ -1,32 +1,32 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
 
-export const LinkName = ({ lighthouse }) =>
-  lighthouse.audits['link-name'].score !== 1 &&
-  lighthouse.audits['link-name'].score !== null && (
-    <li id="link-name">
+export const ImageAlt = ({ lighthouse }) =>
+  lighthouse.audits['image-alt'].score !== 1 &&
+  lighthouse.audits['image-alt'].score !== null && (
+    <li id="image-alt">
       <dl>
         <dt>
-          <Markdown>{lighthouse.audits['link-name'].title}</Markdown>
+          <Markdown>{lighthouse.audits['image-alt'].title}</Markdown>
           <span
             className={`${
-              lighthouse.audits['link-name'].score < 0.5
+              lighthouse.audits['image-alt'].score < 0.5
                 ? `bg-red-300 text-red-900`
                 : `bg-orange-300 text-orange-900`
             } font-black inline-block ml-2 px-2 rounded-full text-sm`}
           >
-            {lighthouse.audits['link-name'].displayValue}
+            {lighthouse.audits['image-alt'].displayValue}
           </span>
         </dt>
         <dd>
           <details>
             <summary>
-              <Markdown>{lighthouse.audits['link-name'].description}</Markdown>
+              <Markdown>{lighthouse.audits['image-alt'].description}</Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['link-name'] && (
+              {lighthouse.stackPacks[0].descriptions['image-alt'] && (
                 <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['link-name']}
+                  {lighthouse.stackPacks[0].descriptions['image-alt']}
                 </Markdown>
               )}
               <div className="overflow-x-auto">
@@ -37,8 +37,8 @@ export const LinkName = ({ lighthouse }) =>
                     </tr>
                   </thead>
                   <tbody>
-                    {lighthouse.audits['link-name'].details &&
-                      lighthouse.audits['link-name'].details.items.map(item => (
+                    {lighthouse.audits['image-alt'].details &&
+                      lighthouse.audits['image-alt'].details.items.map(item => (
                         <tr key={item.path} className="odd:bg-white">
                           <td
                             title={item.selector}

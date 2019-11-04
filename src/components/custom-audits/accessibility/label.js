@@ -2,7 +2,8 @@ import React from 'react';
 import Markdown from 'markdown-to-jsx';
 
 export const Label = ({ lighthouse }) =>
-  lighthouse.audits.label.score !== 1 && (
+  lighthouse.audits.label.score !== 1 &&
+  lighthouse.audits.label.score !== null && (
     <li id="label">
       <dl>
         <dt>

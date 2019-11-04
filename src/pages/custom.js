@@ -25,10 +25,10 @@ const CustomAuditPage = () => (
         {lighthouse.finalUrl}
       </a>
     </h1>
-    <Performance lighthouse={lighthouse} />
+    {/* <Performance lighthouse={lighthouse} /> */}
     <Accessibility lighthouse={lighthouse} />
-    <BestPractices lighthouse={lighthouse} />
-    <SEO lighthouse={lighthouse} />
+    {/* <BestPractices lighthouse={lighthouse} /> */}
+    {/* <SEO lighthouse={lighthouse} /> */}
   </Layout>
 );
 
