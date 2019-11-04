@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-tailwindcss",
+  "name": "whitehouse-reports",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby and Tailwind",
+  "description": "White-Labelled Google Lighthouse reports.",
   "version": "0.1.0",
   "author": "Luke Bennett <hello@lukebennett.com.au>",
   "dependencies": {
