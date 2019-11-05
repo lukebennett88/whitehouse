@@ -1,40 +1,49 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
 
-export const UsesPassiveEventListeners = ({ lighthouse }) =>
-  lighthouse.audits['no-vulnerable-libraries'].score !== 1 &&
-  lighthouse.audits['no-vulnerable-libraries'].score !== null && (
-    <li id="no-vulnerable-libraries">
+export const GeolocationOnStart = ({ lighthouse }) =>
+  lighthouse.audits['geolocation-on-start'].score !== 1 &&
+  lighthouse.audits['geolocation-on-start'].score !== null && (
+    <li id="geolocation-on-start">
       <dl>
         <dt>
-          <Markdown>
-            {lighthouse.audits['no-vulnerable-libraries'].title}
-          </Markdown>
+          <Markdown>{lighthouse.audits['geolocation-on-start'].title}</Markdown>
           <span
             className={`${
-              lighthouse.audits['no-vulnerable-libraries'].score < 0.5
+              lighthouse.audits['geolocation-on-start'].score < 0.5
                 ? `bg-red-300 text-red-900`
                 : `bg-orange-300 text-orange-900`
             } font-black inline-block ml-2 px-2 rounded-full text-sm`}
           >
-            {lighthouse.audits['no-vulnerable-libraries'].displayValue}
+            {lighthouse.audits['geolocation-on-start'].displayValue}
           </span>
         </dt>
         <dd>
           <details>
             <summary>
               <Markdown>
-                {lighthouse.audits['no-vulnerable-libraries'].description}
+                {lighthouse.audits['geolocation-on-start'].description}
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.audits['no-vulnerable-libraries'].details && (
+              {lighthouse.stackPacks[0].descriptions[
+                'geolocation-on-start'
+              ] && (
+                <Markdown>
+                  {
+                    lighthouse.stackPacks[0].descriptions[
+                      'geolocation-on-start'
+                    ]
+                  }
+                </Markdown>
+              )}
+              {lighthouse.audits['geolocation-on-start'].details && (
                 <div className="overflow-x-auto">
                   <table className="mt-2 w-full">
                     <thead>
                       <tr>
                         {lighthouse.audits[
-                          'no-vulnerable-libraries'
+                          'geolocation-on-start'
                         ].details.headings.map(heading => (
                           <th
                             key={heading.key}
@@ -46,19 +55,24 @@ export const UsesPassiveEventListeners = ({ lighthouse }) =>
                       </tr>
                     </thead>
                     <tbody>
-                      {lighthouse.audits['no-vulnerable-libraries'].details &&
+                      {lighthouse.audits['geolocation-on-start'].details &&
                         lighthouse.audits[
-                          'no-vulnerable-libraries'
-                        ].details.items.map(item => (
-                          <tr key={item.path} className="odd:bg-white">
-                            <td title={item.url}>
+                          'geolocation-on-start'
+                        ].details.items.map((item, index) => (
+                          <tr key={index} className="odd:bg-white">
+                            <td title={item.href}>
                               <div className="flex items-center py-2 px-4">
-                                {item.url}
+                                <div>{item.href}</div>
                               </div>
                             </td>
-                            <td title={item.selector}>
+                            <td>
                               <div className="flex items-center py-2 px-4">
-                                {item.label}
+                                <div>{item.target}</div>
+                              </div>
+                            </td>
+                            <td>
+                              <div className="flex items-center py-2 px-4">
+                                <div>{item.rel}</div>
                               </div>
                             </td>
                           </tr>

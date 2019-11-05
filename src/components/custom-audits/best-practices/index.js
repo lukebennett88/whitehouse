@@ -5,9 +5,10 @@ import { AppCacheManifest } from './appcache-manifest';
 import { IsOnHttps } from './is-on-https';
 import { UsesHttp2 } from './uses-http2';
 import { UsesPassiveEventListeners } from './uses-passive-event-listeners';
-// no-document-write
-// external-anchors-use-rel-noopener
-// geolocation-on-start
+import { NoDocumentWrite } from './no-document-write';
+import { ExternalAnchorsUseRelNoopener } from './external-anchors-use-rel-noopener';
+import { GeolocationOnStart } from './geolocation-on-start';
+import { Doctype } from './doctype';
 // doctype
 // no-vulnerable-libraries
 // js-libraries
@@ -42,6 +43,10 @@ const AccessibilityIndex = ({ lighthouse }) => {
         <IsOnHttps lighthouse={lighthouse} />
         <UsesHttp2 lighthouse={lighthouse} />
         <UsesPassiveEventListeners lighthouse={lighthouse} />
+        <NoDocumentWrite lighthouse={lighthouse} />
+        <ExternalAnchorsUseRelNoopener lighthouse={lighthouse} />
+        <GeolocationOnStart lighthouse={lighthouse} />
+        <Doctype lighthouse={lighthouse} />
       </ul>
     </article>
   );
