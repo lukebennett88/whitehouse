@@ -27,7 +27,7 @@ const CustomAuditPage = () => (
     </h1>
     {/* <Performance lighthouse={lighthouse} /> */}
     <Accessibility lighthouse={lighthouse} />
-    {/* <BestPractices lighthouse={lighthouse} /> */}
+    <BestPractices lighthouse={lighthouse} />
     {/* <SEO lighthouse={lighthouse} /> */}
   </Layout>
 );

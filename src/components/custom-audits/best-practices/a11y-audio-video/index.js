@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { AudioCaption } from './audio-caption';
-import { VideoCaption } from './video-caption';
-import { VideoDescription } from './video-description';
+// // audio-caption
+// // video-caption
+// // video-description
 
 const A11yAudioVideo = ({ lighthouse }) =>
   lighthouse.categories.accessibility.auditRefs.some(
@@ -19,11 +19,7 @@ const A11yAudioVideo = ({ lighthouse }) =>
         video. This may improve the experience for users with hearing or vision
         impairments.
       </h4>
-      <ul>
-        <AudioCaption lighthouse={lighthouse} />
-        <VideoCaption lighthouse={lighthouse} />
-        <VideoDescription lighthouse={lighthouse} />
-      </ul>
+      <ul>{/* <AriaAllowedAttr lighthouse={lighthouse} /> */}</ul>
     </>
   );
 
