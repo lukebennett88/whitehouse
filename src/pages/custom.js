@@ -5,7 +5,7 @@ import Meta from '../components/meta';
 import Performance from '../components/custom-audits/performance';
 import Accessibility from '../components/custom-audits/accessibility';
 import BestPractices from '../components/custom-audits/best-practices';
-import SEO from '../components/seo';
+import SEO from '../components/custom-audits/seo';
 
 import eastlandtruss from '../data/eastlandtruss.com.au.json';
 import phirannodesigns from '../data/phirannodesigns.com.au.json';
@@ -43,8 +43,8 @@ const CustomAuditPage = () => {
           {lighthouse.finalUrl}
         </a>
       </h1>
-      {/* <Performance lighthouse={lighthouse} /> */}
-      {/* <Accessibility lighthouse={lighthouse} /> */}
+      <Performance lighthouse={lighthouse} />
+      <Accessibility lighthouse={lighthouse} />
       <BestPractices lighthouse={lighthouse} />
       <SEO lighthouse={lighthouse} />
     </Layout>

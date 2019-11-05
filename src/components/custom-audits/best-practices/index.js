@@ -17,7 +17,7 @@ import { PasswordInputsCanBePastedInto } from './password-inputs-can-be-pasted-i
 import { ErrorsInConsole } from './errors-in-console';
 import { ImageAspectRatio } from './image-aspect-ratio';
 
-const AccessibilityIndex = ({ lighthouse }) => {
+const BestPracticesIndex = ({ lighthouse }) => {
   let colors = `bg-green-300 text-green-900`;
   if (lighthouse.categories['best-practices'].score < 0.9) {
     colors = `bg-orange-300 text-orange-900`;
@@ -58,8 +58,8 @@ const AccessibilityIndex = ({ lighthouse }) => {
   );
 };
 
-AccessibilityIndex.propTypes = {
+BestPracticesIndex.propTypes = {
   lighthouse: PropTypes.object,
 };
 
-export default AccessibilityIndex;
+export default BestPracticesIndex;
