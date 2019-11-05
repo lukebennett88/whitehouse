@@ -29,14 +29,16 @@ const AccessibilityIndex = ({ lighthouse }) => {
             100
         ).toFixed(0)}
       </span>
-      <A11yColorContrast lighthouse={lighthouse} />
-      <A11yBestPractices lighthouse={lighthouse} />
-      <A11yNamesLabels lighthouse={lighthouse} />
-      <A11yNavigation lighthouse={lighthouse} />
-      <A11yAria lighthouse={lighthouse} />
-      <A11yAudioVideo lighthouse={lighthouse} />
-      <A11yTablesLists lighthouse={lighthouse} />
-      <A11yLanguage lighthouse={lighthouse} />
+      <ul>
+        <A11yColorContrast lighthouse={lighthouse} />
+        <A11yBestPractices lighthouse={lighthouse} />
+        <A11yNamesLabels lighthouse={lighthouse} />
+        <A11yNavigation lighthouse={lighthouse} />
+        <A11yAria lighthouse={lighthouse} />
+        <A11yAudioVideo lighthouse={lighthouse} />
+        <A11yTablesLists lighthouse={lighthouse} />
+        <A11yLanguage lighthouse={lighthouse} />
+      </ul>
     </article>
   );
 };
