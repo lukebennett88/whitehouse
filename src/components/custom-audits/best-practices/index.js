@@ -9,14 +9,13 @@ import { NoDocumentWrite } from './no-document-write';
 import { ExternalAnchorsUseRelNoopener } from './external-anchors-use-rel-noopener';
 import { GeolocationOnStart } from './geolocation-on-start';
 import { Doctype } from './doctype';
-// doctype
-// no-vulnerable-libraries
-// js-libraries
-// notification-on-start
-// deprecations
-// password-inputs-can-be-pasted-into
-// errors-in-console
-// image-aspect-ratio
+import { NoVulnerableLibraries } from './no-vulnerable-libraries';
+import { JSLibraries } from './js-libraries';
+import { NotificationOnStart } from './notification-on-start';
+import { Deprecations } from './deprecations';
+import { PasswordInputsCanBePastedInto } from './password-inputs-can-be-pasted-into';
+import { ErrorsInConsole } from './errors-in-console';
+import { ImageAspectRatio } from './image-aspect-ratio';
 
 const AccessibilityIndex = ({ lighthouse }) => {
   let colors = `bg-green-300 text-green-900`;
@@ -47,6 +46,13 @@ const AccessibilityIndex = ({ lighthouse }) => {
         <ExternalAnchorsUseRelNoopener lighthouse={lighthouse} />
         <GeolocationOnStart lighthouse={lighthouse} />
         <Doctype lighthouse={lighthouse} />
+        <NoVulnerableLibraries lighthouse={lighthouse} />
+        <JSLibraries lighthouse={lighthouse} />
+        <NotificationOnStart lighthouse={lighthouse} />
+        <Deprecations lighthouse={lighthouse} />
+        <PasswordInputsCanBePastedInto lighthouse={lighthouse} />
+        <ErrorsInConsole lighthouse={lighthouse} />
+        <ImageAspectRatio lighthouse={lighthouse} />
       </ul>
     </article>
   );
