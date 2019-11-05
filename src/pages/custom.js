@@ -19,14 +19,14 @@ const CustomAuditPage = () => {
         <button
           onClick={() => setLighthouse(phirannodesigns)}
           type="button"
-          className="bg-indigo-100 font-black px-4 py-1 mx-2 rounded-full text-indigo-800 text-xs tracking-wide uppercase hover:shadow"
+          className="bg-indigo-300 font-black px-4 py-1 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
         >
           Phiranno Designs
         </button>
         <button
           onClick={() => setLighthouse(eastlandtruss)}
           type="button"
-          className="bg-indigo-100 font-black px-4 py-1 mx-2 rounded-full text-indigo-800 text-xs tracking-wide uppercase hover:shadow"
+          className="bg-indigo-300 font-black px-4 py-1 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
         >
           Eastland Truss
         </button>
