@@ -32,8 +32,8 @@ export const TapTargets = ({ lighthouse }) =>
                     <thead>
                       <tr>
                         {lighthouse.audits['tap-targets'].details.headings.map(
-                          heading => (
-                            <th className="font-black px-4 py-2">
+                          (heading, index) => (
+                            <th key={index} className="font-black px-4 py-2">
                               {heading.text}
                             </th>
                           )
@@ -43,8 +43,8 @@ export const TapTargets = ({ lighthouse }) =>
                     <tbody>
                       {lighthouse.audits['tap-targets'].details &&
                         lighthouse.audits['tap-targets'].details.items.map(
-                          item => (
-                            <tr key={item.path} className="odd:bg-white">
+                          (item, index) => (
+                            <tr key={index} className="odd:bg-white">
                               <td
                                 title={item.tapTarget.selector}
                                 className="py-2 px-4"

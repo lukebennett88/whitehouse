@@ -47,8 +47,8 @@ export const IsOnHttps = ({ lighthouse }) =>
                     <tbody>
                       {lighthouse.audits['is-on-https'].details &&
                         lighthouse.audits['is-on-https'].details.items.map(
-                          item => (
-                            <tr key={item.path} className="odd:bg-white">
+                          (item, index) => (
+                            <tr key={index} className="odd:bg-white">
                               <td title={item.selector}>
                                 <div className="flex items-center py-2 px-4">
                                   <div>{item.url}</div>

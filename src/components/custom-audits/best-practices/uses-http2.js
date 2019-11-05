@@ -40,8 +40,8 @@ export const UsesHttp2 = ({ lighthouse }) =>
                     <tbody>
                       {lighthouse.audits['uses-http2'].details &&
                         lighthouse.audits['uses-http2'].details.items.map(
-                          item => (
-                            <tr key={item.path} className="odd:bg-white">
+                          (item, index) => (
+                            <tr key={index} className="odd:bg-white">
                               <td title={item.selector}>
                                 <div className="flex items-center py-2 px-4">
                                   <div>{item.url}</div>

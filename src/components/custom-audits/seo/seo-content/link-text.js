@@ -30,8 +30,8 @@ export const LinkText = ({ lighthouse }) =>
                     <thead>
                       <tr>
                         {lighthouse.audits['link-text'].details.headings.map(
-                          heading => (
-                            <th className="font-black px-4 py-2">
+                          (heading, index) => (
+                            <th key={index} className="font-black px-4 py-2">
                               {heading.text}
                             </th>
                           )

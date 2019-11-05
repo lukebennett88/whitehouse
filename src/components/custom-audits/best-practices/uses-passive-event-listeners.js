@@ -37,7 +37,7 @@ export const UsesPassiveEventListeners = ({ lighthouse }) =>
                           'no-vulnerable-libraries'
                         ].details.headings.map(heading => (
                           <th
-                            key={heading.key}
+                            key={heading.text}
                             className="font-black px-4 py-2"
                           >
                             {heading.text}
@@ -49,8 +49,8 @@ export const UsesPassiveEventListeners = ({ lighthouse }) =>
                       {lighthouse.audits['no-vulnerable-libraries'].details &&
                         lighthouse.audits[
                           'no-vulnerable-libraries'
-                        ].details.items.map(item => (
-                          <tr key={item.path} className="odd:bg-white">
+                        ].details.items.map((item, index) => (
+                          <tr key={index} className="odd:bg-white">
                             <td title={item.url}>
                               <div className="flex items-center py-2 px-4">
                                 {item.url}
