@@ -30,5 +30,5 @@ a:hover:not([class]),
 }
 
 dt {
-  @apply font-black flex items-center mt-4 text-lg;
+  @apply font-black flex items-baseline mt-4 text-lg;
 }

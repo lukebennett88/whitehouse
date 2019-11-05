@@ -13,7 +13,7 @@ export const THHasDataCells = ({ lighthouse }) =>
               lighthouse.audits['th-has-data-cells'].score < 0.5
                 ? `bg-red-300 text-red-900`
                 : `bg-orange-300 text-orange-900`
-            } font-black inline-block ml-2 px-2 rounded-full text-sm`}
+            } font-black inline-block ml-2 px-2 rounded-full text-sm whitespace-no-wrap`}
           >
             {lighthouse.audits['th-has-data-cells'].displayValue}
           </span>
