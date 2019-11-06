@@ -64,7 +64,6 @@ const CustomAuditPage = () => {
           Port Plumbing
         </button>
       </div>
-      <Scores lighthouse={lighthouse} />
       <h1 className="font-black leading-none mt-12 overflow-x-auto text-4xl w-full">
         <span>Report for: </span>
         <br />
@@ -77,6 +76,7 @@ const CustomAuditPage = () => {
           {lighthouse.finalUrl}
         </a>
       </h1>
+      <Scores lighthouse={lighthouse} />
       <Performance lighthouse={lighthouse} />
       <Accessibility lighthouse={lighthouse} />
       <BestPractices lighthouse={lighthouse} />
