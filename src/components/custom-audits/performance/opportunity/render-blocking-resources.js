@@ -28,6 +28,19 @@ export const RenderBlockingResources = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
+              {lighthouse.stackPacks[0] &&
+                lighthouse.stackPacks[0].descriptions &&
+                lighthouse.stackPacks[0].descriptions[
+                  'render-blocking-resources'
+                ] && (
+                  <Markdown>
+                    {
+                      lighthouse.stackPacks[0].descriptions[
+                        'render-blocking-resources'
+                      ]
+                    }
+                  </Markdown>
+                )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

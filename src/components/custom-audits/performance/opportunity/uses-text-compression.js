@@ -28,6 +28,19 @@ export const UsesTextCompression = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
+              {lighthouse.stackPacks[0] &&
+                lighthouse.stackPacks[0].descriptions &&
+                lighthouse.stackPacks[0].descriptions[
+                  'uses-text-compression'
+                ] && (
+                  <Markdown>
+                    {
+                      lighthouse.stackPacks[0].descriptions[
+                        'uses-text-compression'
+                      ]
+                    }
+                  </Markdown>
+                )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

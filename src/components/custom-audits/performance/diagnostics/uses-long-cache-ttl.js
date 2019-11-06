@@ -26,6 +26,19 @@ export const UsesLongCacheTTL = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
+              {lighthouse.stackPacks[0] &&
+                lighthouse.stackPacks[0].descriptions &&
+                lighthouse.stackPacks[0].descriptions[
+                  'uses-long-cache-ttl'
+                ] && (
+                  <Markdown>
+                    {
+                      lighthouse.stackPacks[0].descriptions[
+                        'uses-long-cache-ttl'
+                      ]
+                    }
+                  </Markdown>
+                )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

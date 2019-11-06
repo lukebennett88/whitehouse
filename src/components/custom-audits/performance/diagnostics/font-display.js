@@ -10,7 +10,7 @@ export const FontDisplay = ({ lighthouse }) =>
           <Markdown>{lighthouse.audits['font-display'].title}</Markdown>
           <span
             className={`${
-              lighthouse.audits['bootup-time'].score < 0.5
+              lighthouse.audits['font-display'].score < 0.5
                 ? `bg-red-300 text-red-900`
                 : `bg-orange-300 text-orange-900`
             } font-black inline-block ml-2 px-2 rounded-full text-sm whitespace-no-wrap`}
@@ -26,6 +26,13 @@ export const FontDisplay = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
+              {lighthouse.stackPacks[0] &&
+                lighthouse.stackPacks[0].descriptions &&
+                lighthouse.stackPacks[0].descriptions['font-display'] && (
+                  <Markdown>
+                    {lighthouse.stackPacks[0].descriptions['font-display']}
+                  </Markdown>
+                )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

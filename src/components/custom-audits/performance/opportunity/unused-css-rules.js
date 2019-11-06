@@ -26,6 +26,13 @@ export const UnusedCSSRules = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
+              {lighthouse.stackPacks[0] &&
+                lighthouse.stackPacks[0].descriptions &&
+                lighthouse.stackPacks[0].descriptions['unused-css-rules'] && (
+                  <Markdown>
+                    {lighthouse.stackPacks[0].descriptions['unused-css-rules']}
+                  </Markdown>
+                )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

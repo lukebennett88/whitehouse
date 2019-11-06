@@ -28,6 +28,19 @@ export const MainthreadWorkBreakdown = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
+              {lighthouse.stackPacks[0] &&
+                lighthouse.stackPacks[0].descriptions &&
+                lighthouse.stackPacks[0].descriptions[
+                  'mainthread-work-breakdown'
+                ] && (
+                  <Markdown>
+                    {
+                      lighthouse.stackPacks[0].descriptions[
+                        'mainthread-work-breakdown'
+                      ]
+                    }
+                  </Markdown>
+                )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>
