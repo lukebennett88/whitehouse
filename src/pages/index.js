@@ -18,7 +18,7 @@ const CustomAuditPage = () => {
   return (
     <Layout>
       <Meta title="Home" />
-      <div className="-mx-2">
+      <div className="mt-6 -mx-2">
         <button
           onClick={() => setLighthouse(eastlandtruss)}
           type="button"
