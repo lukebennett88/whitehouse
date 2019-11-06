@@ -34,17 +34,6 @@ export const ExternalAnchorsUseRelNoopener = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions[
-                'external-anchors-use-rel-noopener'
-              ] && (
-                <Markdown>
-                  {
-                    lighthouse.stackPacks[0].descriptions[
-                      'external-anchors-use-rel-noopener'
-                    ]
-                  }
-                </Markdown>
-              )}
               {lighthouse.audits['external-anchors-use-rel-noopener']
                 .details && (
                 <div className="overflow-x-auto">

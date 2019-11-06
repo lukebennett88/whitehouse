@@ -28,17 +28,6 @@ export const UsesOptimizedImages = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions[
-                'uses-optimized-images'
-              ] && (
-                <Markdown>
-                  {
-                    lighthouse.stackPacks[0].descriptions[
-                      'uses-optimized-images'
-                    ]
-                  }
-                </Markdown>
-              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>
