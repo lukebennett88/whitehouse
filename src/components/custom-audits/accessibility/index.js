@@ -20,25 +20,29 @@ const AccessibilityIndex = ({ lighthouse }) => {
   }
   return (
     <article className="bg-indigo-100 my-4 px-4 py-6">
-      <h3 className="font-black text-3xl">Accessibility</h3>
-      <span
-        className={`${colors} flex font-black h-24 items-center justify-center mt-4 rounded-full text-4xl w-24`}
-      >
-        {parseFloat(
-          Math.round(lighthouse.categories.accessibility.score * 100 * 100) /
-            100
-        ).toFixed(0)}
-      </span>
-      <ul>
-        <A11yColorContrast lighthouse={lighthouse} />
-        <A11yBestPractices lighthouse={lighthouse} />
-        <A11yNamesLabels lighthouse={lighthouse} />
-        <A11yNavigation lighthouse={lighthouse} />
-        <A11yAria lighthouse={lighthouse} />
-        <A11yAudioVideo lighthouse={lighthouse} />
-        <A11yTablesLists lighthouse={lighthouse} />
-        <A11yLanguage lighthouse={lighthouse} />
-      </ul>
+      <details>
+        <summary>
+          <h3 className="font-black text-3xl">Accessibility</h3>
+        </summary>
+        <span
+          className={`${colors} flex font-black h-24 items-center justify-center mt-4 rounded-full text-4xl w-24`}
+        >
+          {parseFloat(
+            Math.round(lighthouse.categories.accessibility.score * 100 * 100) /
+              100
+          ).toFixed(0)}
+        </span>
+        <ul>
+          <A11yColorContrast lighthouse={lighthouse} />
+          <A11yBestPractices lighthouse={lighthouse} />
+          <A11yNamesLabels lighthouse={lighthouse} />
+          <A11yNavigation lighthouse={lighthouse} />
+          <A11yAria lighthouse={lighthouse} />
+          <A11yAudioVideo lighthouse={lighthouse} />
+          <A11yTablesLists lighthouse={lighthouse} />
+          <A11yLanguage lighthouse={lighthouse} />
+        </ul>
+      </details>
     </article>
   );
 };

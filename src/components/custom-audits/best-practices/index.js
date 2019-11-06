@@ -27,33 +27,37 @@ const BestPracticesIndex = ({ lighthouse }) => {
   }
   return (
     <article className="bg-indigo-100 my-4 px-4 py-6">
-      <h3 className="font-black text-3xl">Best Practices</h3>
-      <span
-        className={`${colors} flex font-black h-24 items-center justify-center mt-4 rounded-full text-4xl w-24`}
-      >
-        {parseFloat(
-          Math.round(
-            lighthouse.categories['best-practices'].score * 100 * 100
-          ) / 100
-        ).toFixed(0)}
-      </span>
-      <ul>
-        <AppCacheManifest lighthouse={lighthouse} />
-        <IsOnHttps lighthouse={lighthouse} />
-        <UsesHttp2 lighthouse={lighthouse} />
-        <UsesPassiveEventListeners lighthouse={lighthouse} />
-        <NoDocumentWrite lighthouse={lighthouse} />
-        <ExternalAnchorsUseRelNoopener lighthouse={lighthouse} />
-        <GeolocationOnStart lighthouse={lighthouse} />
-        <Doctype lighthouse={lighthouse} />
-        <NoVulnerableLibraries lighthouse={lighthouse} />
-        <JSLibraries lighthouse={lighthouse} />
-        <NotificationOnStart lighthouse={lighthouse} />
-        <Deprecations lighthouse={lighthouse} />
-        <PasswordInputsCanBePastedInto lighthouse={lighthouse} />
-        <ErrorsInConsole lighthouse={lighthouse} />
-        <ImageAspectRatio lighthouse={lighthouse} />
-      </ul>
+      <details>
+        <summary>
+          <h3 className="font-black text-3xl">Best Practices</h3>
+        </summary>
+        <span
+          className={`${colors} flex font-black h-24 items-center justify-center mt-4 rounded-full text-4xl w-24`}
+        >
+          {parseFloat(
+            Math.round(
+              lighthouse.categories['best-practices'].score * 100 * 100
+            ) / 100
+          ).toFixed(0)}
+        </span>
+        <ul>
+          <AppCacheManifest lighthouse={lighthouse} />
+          <IsOnHttps lighthouse={lighthouse} />
+          <UsesHttp2 lighthouse={lighthouse} />
+          <UsesPassiveEventListeners lighthouse={lighthouse} />
+          <NoDocumentWrite lighthouse={lighthouse} />
+          <ExternalAnchorsUseRelNoopener lighthouse={lighthouse} />
+          <GeolocationOnStart lighthouse={lighthouse} />
+          <Doctype lighthouse={lighthouse} />
+          <NoVulnerableLibraries lighthouse={lighthouse} />
+          <JSLibraries lighthouse={lighthouse} />
+          <NotificationOnStart lighthouse={lighthouse} />
+          <Deprecations lighthouse={lighthouse} />
+          <PasswordInputsCanBePastedInto lighthouse={lighthouse} />
+          <ErrorsInConsole lighthouse={lighthouse} />
+          <ImageAspectRatio lighthouse={lighthouse} />
+        </ul>
+      </details>
     </article>
   );
 };
