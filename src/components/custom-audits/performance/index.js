@@ -16,16 +16,19 @@ const PerformanceIndex = ({ lighthouse }) => {
   return (
     <article id="performance" className="bg-indigo-100 my-4 px-4 py-6">
       <details>
-        <summary className="flex items-center">
-          <span
-            className={`${colors} font-black inline-block px-4 py-1 rounded-full text-sm whitespace-no-wrap`}
-          >
-            {parseFloat(
-              Math.round(lighthouse.categories.performance.score * 100 * 100) /
-                100
-            ).toFixed(0)}
-          </span>
-          <h3 className="font-black ml-2 text-3xl">Performance</h3>
+        <summary>
+          <div className="flex items-center">
+            <span
+              className={`${colors} flex font-black px-4 py-1 rounded-full text-sm whitespace-no-wrap`}
+            >
+              {parseFloat(
+                Math.round(
+                  lighthouse.categories.performance.score * 100 * 100
+                ) / 100
+              ).toFixed(0)}
+            </span>
+            <h3 className="font-black ml-2 text-3xl">Performance</h3>
+          </div>
         </summary>
         <Metrics lighthouse={lighthouse} />
         <Opportunity lighthouse={lighthouse} />

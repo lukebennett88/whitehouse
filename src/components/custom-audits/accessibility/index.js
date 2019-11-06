@@ -21,17 +21,19 @@ const AccessibilityIndex = ({ lighthouse }) => {
   return (
     <article id="accessibility" className="bg-indigo-100 my-4 px-4 py-6">
       <details>
-        <summary className="flex items-center">
-          <span
-            className={`${colors} font-black inline-block px-4 py-1 rounded-full text-sm whitespace-no-wrap`}
-          >
-            {parseFloat(
-              Math.round(
-                lighthouse.categories.accessibility.score * 100 * 100
-              ) / 100
-            ).toFixed(0)}
-          </span>
-          <h3 className="font-black ml-2 text-3xl">Accessibility</h3>
+        <summary>
+          <div className="flex items-center">
+            <span
+              className={`${colors} font-black inline-block px-4 py-1 rounded-full text-sm whitespace-no-wrap`}
+            >
+              {parseFloat(
+                Math.round(
+                  lighthouse.categories.accessibility.score * 100 * 100
+                ) / 100
+              ).toFixed(0)}
+            </span>
+            <h3 className="font-black ml-2 text-3xl">Accessibility</h3>
+          </div>
         </summary>
         <ul>
           <A11yColorContrast lighthouse={lighthouse} />
