@@ -24,11 +24,6 @@ export const FontSize = ({ lighthouse }) =>
               <Markdown>{lighthouse.audits['font-size'].description}</Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['font-size'] && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['font-size']}
-                </Markdown>
-              )}
               {lighthouse.audits['font-size'].details && (
                 <div className="overflow-x-auto">
                   <table className="mt-2 w-full">

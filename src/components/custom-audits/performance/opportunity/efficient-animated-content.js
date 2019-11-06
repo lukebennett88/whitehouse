@@ -28,13 +28,6 @@ export const EfficientAnimatedContent = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              <Markdown>
-                {
-                  lighthouse.stackPacks[0].descriptions[
-                    'efficient-animated-content'
-                  ]
-                }
-              </Markdown>
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

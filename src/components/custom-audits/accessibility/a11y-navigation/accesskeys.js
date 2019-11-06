@@ -24,11 +24,6 @@ export const Accesskeys = ({ lighthouse }) =>
               <Markdown>{lighthouse.audits.accesskeys.description}</Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions.accesskeys && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions.accesskeys}
-                </Markdown>
-              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

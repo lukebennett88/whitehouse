@@ -26,11 +26,6 @@ export const VideoDescription = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['video-description'] && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['video-description']}
-                </Markdown>
-              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

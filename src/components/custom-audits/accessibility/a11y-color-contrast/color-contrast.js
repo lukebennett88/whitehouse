@@ -26,11 +26,6 @@ export const ColorContrast = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['color-contrast'] && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['color-contrast']}
-                </Markdown>
-              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

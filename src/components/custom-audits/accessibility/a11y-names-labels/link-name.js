@@ -24,11 +24,6 @@ export const LinkName = ({ lighthouse }) =>
               <Markdown>{lighthouse.audits['link-name'].description}</Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['link-name'] && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['link-name']}
-                </Markdown>
-              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

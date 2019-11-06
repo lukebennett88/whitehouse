@@ -24,11 +24,6 @@ export const Viewport = ({ lighthouse }) =>
               <Markdown>{lighthouse.audits.viewport.description}</Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions.viewport && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions.viewport}
-                </Markdown>
-              )}
               {lighthouse.audits.viewport.details && (
                 <div className="overflow-x-auto">
                   <table className="mt-2 w-full">

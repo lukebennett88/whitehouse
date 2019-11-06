@@ -26,11 +26,6 @@ export const AppCacheManifest = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['appcache-manifest'] && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['appcache-manifest']}
-                </Markdown>
-              )}
               {lighthouse.audits['appcache-manifest'].details && (
                 <div className="overflow-x-auto">
                   <table className="mt-2 w-full">

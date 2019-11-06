@@ -24,11 +24,6 @@ export const TabIndex = ({ lighthouse }) =>
               <Markdown>{lighthouse.audits.tabindex.description}</Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions.tabindex && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions.tabindex}
-                </Markdown>
-              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

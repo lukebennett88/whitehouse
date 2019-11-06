@@ -24,11 +24,6 @@ export const Doctype = ({ lighthouse }) =>
               <Markdown>{lighthouse.audits.doctype.description}</Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions.doctype && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions.doctype}
-                </Markdown>
-              )}
               {lighthouse.audits.doctype.details && (
                 <div className="overflow-x-auto">
                   <table className="mt-2 w-full">

@@ -28,17 +28,6 @@ export const AriaValidAttrValue = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions[
-                'aria-valid-attr-value'
-              ] && (
-                <Markdown>
-                  {
-                    lighthouse.stackPacks[0].descriptions[
-                      'aria-valid-attr-value'
-                    ]
-                  }
-                </Markdown>
-              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

@@ -26,11 +26,6 @@ export const DefinitionList = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['definition-list'] && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['definition-list']}
-                </Markdown>
-              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

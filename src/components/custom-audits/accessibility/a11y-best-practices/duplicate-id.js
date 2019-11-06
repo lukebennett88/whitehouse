@@ -26,11 +26,6 @@ export const DuplicateID = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['duplicate-id'] && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['duplicate-id']}
-                </Markdown>
-              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

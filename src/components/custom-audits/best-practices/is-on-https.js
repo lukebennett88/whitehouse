@@ -26,11 +26,6 @@ export const IsOnHttps = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['is-on-https'] && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['is-on-https']}
-                </Markdown>
-              )}
               {lighthouse.audits['is-on-https'].details && (
                 <div className="overflow-x-auto">
                   <table className="mt-2 w-full">

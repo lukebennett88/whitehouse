@@ -26,17 +26,6 @@ export const GeolocationOnStart = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions[
-                'geolocation-on-start'
-              ] && (
-                <Markdown>
-                  {
-                    lighthouse.stackPacks[0].descriptions[
-                      'geolocation-on-start'
-                    ]
-                  }
-                </Markdown>
-              )}
               {lighthouse.audits['geolocation-on-start'].details && (
                 <div className="overflow-x-auto">
                   <table className="mt-2 w-full">

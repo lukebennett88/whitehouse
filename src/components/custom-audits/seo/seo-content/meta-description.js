@@ -26,11 +26,6 @@ export const MetaDescription = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['meta-description'] && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['meta-description']}
-                </Markdown>
-              )}
               {lighthouse.audits['meta-description'].details && (
                 <div className="overflow-x-auto">
                   <table className="mt-2 w-full">

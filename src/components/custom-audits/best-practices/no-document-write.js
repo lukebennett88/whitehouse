@@ -26,11 +26,6 @@ export const NoDocumentWrite = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['no-document-write'] && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['no-document-write']}
-                </Markdown>
-              )}
               {lighthouse.audits['no-document-write'].details && (
                 <div className="overflow-x-auto">
                   <table className="mt-2 w-full">

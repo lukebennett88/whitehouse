@@ -24,11 +24,6 @@ export const DLItem = ({ lighthouse }) =>
               <Markdown>{lighthouse.audits.dlitem.description}</Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions.dlitem && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions.dlitem}
-                </Markdown>
-              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

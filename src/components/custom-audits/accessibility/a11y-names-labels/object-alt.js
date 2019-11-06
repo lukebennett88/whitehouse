@@ -24,11 +24,6 @@ export const ObjectAlt = ({ lighthouse }) =>
               <Markdown>{lighthouse.audits['object-alt'].description}</Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['object-alt'] && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['object-alt']}
-                </Markdown>
-              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

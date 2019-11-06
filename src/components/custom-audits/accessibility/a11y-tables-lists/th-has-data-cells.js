@@ -26,11 +26,6 @@ export const THHasDataCells = ({ lighthouse }) =>
               </Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['th-has-data-cells'] && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['th-has-data-cells']}
-                </Markdown>
-              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>

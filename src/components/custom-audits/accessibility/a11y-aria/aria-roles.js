@@ -24,11 +24,6 @@ export const AriaRoles = ({ lighthouse }) =>
               <Markdown>{lighthouse.audits['aria-roles'].description}</Markdown>
             </summary>
             <div className="mt-4">
-              {lighthouse.stackPacks[0].descriptions['aria-roles'] && (
-                <Markdown>
-                  {lighthouse.stackPacks[0].descriptions['aria-roles']}
-                </Markdown>
-              )}
               <div className="overflow-x-auto">
                 <table className="mt-2 w-full">
                   <thead>
