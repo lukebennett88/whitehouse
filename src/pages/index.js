@@ -2,6 +2,7 @@ import React from 'react';
 
 import Layout from '../components/layout';
 import Meta from '../components/meta';
+import Scores from '../components/scores';
 import Performance from '../components/custom-audits/performance';
 import Accessibility from '../components/custom-audits/accessibility';
 import BestPractices from '../components/custom-audits/best-practices';
@@ -11,6 +12,7 @@ import eastlandtruss from '../data/eastlandtruss.com.au.json';
 import feelfitpm from '../data/feelfitpm.com.json';
 import hawkesconveyancing from '../data/hawkesconveyancing.com.au.json';
 import phirannodesigns from '../data/phirannodesigns.com.au.json';
+import photoenlargements from '../data/photoenlargements.com.au.json';
 import portmacquarieplumbing from '../data/portmacquarieplumbing.com.au.json';
 
 const CustomAuditPage = () => {
@@ -18,43 +20,51 @@ const CustomAuditPage = () => {
   return (
     <Layout>
       <Meta title="Home" />
-      <div className="mt-6 -mx-2">
+      <div className="flex flex-wrap -mx-2">
         <button
           onClick={() => setLighthouse(eastlandtruss)}
           type="button"
-          className="bg-indigo-300 font-black px-4 py-1 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
+          className="bg-indigo-300 font-black px-4 py-1 mt-6 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
         >
           Eastland Truss
         </button>
         <button
           onClick={() => setLighthouse(feelfitpm)}
           type="button"
-          className="bg-indigo-300 font-black px-4 py-1 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
+          className="bg-indigo-300 font-black px-4 py-1 mt-6 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
         >
           FeelFit
         </button>
         <button
           onClick={() => setLighthouse(hawkesconveyancing)}
           type="button"
-          className="bg-indigo-300 font-black px-4 py-1 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
+          className="bg-indigo-300 font-black px-4 py-1 mt-6 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
         >
           Hawkes Conveyancing
         </button>
         <button
           onClick={() => setLighthouse(phirannodesigns)}
           type="button"
-          className="bg-indigo-300 font-black px-4 py-1 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
+          className="bg-indigo-300 font-black px-4 py-1 mt-6 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
         >
           Phiranno Designs
         </button>
         <button
+          onClick={() => setLighthouse(photoenlargements)}
+          type="button"
+          className="bg-indigo-300 font-black px-4 py-1 mt-6 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
+        >
+          Photo Enlargements
+        </button>
+        <button
           onClick={() => setLighthouse(portmacquarieplumbing)}
           type="button"
-          className="bg-indigo-300 font-black px-4 py-1 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
+          className="bg-indigo-300 font-black px-4 py-1 mt-6 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
         >
           Port Plumbing
         </button>
       </div>
+      <Scores lighthouse={lighthouse} />
       <h1 className="font-black leading-none mt-12 overflow-x-auto text-4xl w-full">
         <span>Report for: </span>
         <br />

@@ -14,18 +14,18 @@ const SEOIndex = ({ lighthouse }) => {
     colors = `bg-red-300 text-red-900`;
   }
   return (
-    <article className="bg-indigo-100 my-4 px-4 py-6">
+    <article id="seo" className="bg-indigo-100 my-4 px-4 py-6">
       <details>
-        <summary>
-          <h3 className="font-black text-3xl">SEO</h3>
+        <summary className="flex items-center">
+          <span
+            className={`${colors} font-black inline-block px-4 py-1 rounded-full text-sm whitespace-no-wrap`}
+          >
+            {parseFloat(
+              Math.round(lighthouse.categories.seo.score * 100 * 100) / 100
+            ).toFixed(0)}
+          </span>
+          <h3 className="font-black ml-2 text-3xl">SEO</h3>
         </summary>
-        <span
-          className={`${colors} flex font-black h-24 items-center justify-center mt-4 rounded-full text-4xl w-24`}
-        >
-          {parseFloat(
-            Math.round(lighthouse.categories.seo.score * 100 * 100) / 100
-          ).toFixed(0)}
-        </span>
         <ul>
           <SEOMobile lighthouse={lighthouse} />
           <SEOContent lighthouse={lighthouse} />
