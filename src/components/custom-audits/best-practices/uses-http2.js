@@ -19,7 +19,7 @@ export const UsesHttp2 = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits['uses-http2'].description}</Markdown>
             </summary>

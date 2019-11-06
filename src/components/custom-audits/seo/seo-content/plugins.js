@@ -19,7 +19,7 @@ export const Plugins = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits.plugins.description}</Markdown>
             </summary>

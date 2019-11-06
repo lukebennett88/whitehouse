@@ -19,7 +19,7 @@ export const ObjectAlt = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits['object-alt'].description}</Markdown>
             </summary>

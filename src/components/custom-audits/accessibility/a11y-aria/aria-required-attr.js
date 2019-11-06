@@ -19,7 +19,7 @@ export const AriaRequiredAttr = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['aria-required-attr'].description}

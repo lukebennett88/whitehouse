@@ -19,7 +19,7 @@ export const LinkText = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits['link-text'].description}</Markdown>
             </summary>

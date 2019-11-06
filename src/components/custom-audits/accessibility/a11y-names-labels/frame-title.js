@@ -19,7 +19,7 @@ export const FrameTitle = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['frame-title'].description}

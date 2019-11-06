@@ -19,7 +19,7 @@ export const THHasDataCells = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['th-has-data-cells'].description}

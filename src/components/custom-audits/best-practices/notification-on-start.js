@@ -21,7 +21,7 @@ export const NotificationOnStart = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['notification-on-start'].description}

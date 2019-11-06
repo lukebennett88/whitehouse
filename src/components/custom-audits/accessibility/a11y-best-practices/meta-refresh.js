@@ -19,7 +19,7 @@ export const MetaRefresh = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['meta-refresh'].description}

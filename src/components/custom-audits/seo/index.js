@@ -18,7 +18,7 @@ const SEOIndex = ({ lighthouse }) => {
       id="seo"
       className="bg-indigo-100 my-4 px-4 py-6 shadow hover:shadow-lg"
     >
-      <details>
+      <details open>
         <summary>
           <div className="flex items-center">
             <span

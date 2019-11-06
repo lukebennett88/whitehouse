@@ -19,7 +19,7 @@ export const List = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits.list.description}</Markdown>
             </summary>

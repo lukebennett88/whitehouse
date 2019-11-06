@@ -19,7 +19,7 @@ export const Bypass = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits.bypass.description}</Markdown>
             </summary>

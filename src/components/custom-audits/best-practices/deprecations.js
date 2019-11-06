@@ -19,7 +19,7 @@ export const Deprecations = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits.deprecations.description}</Markdown>
             </summary>

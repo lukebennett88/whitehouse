@@ -19,7 +19,7 @@ export const GeolocationOnStart = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['geolocation-on-start'].description}

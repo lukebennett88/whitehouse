@@ -19,7 +19,7 @@ export const InputImageAlt = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['input-image-alt'].description}

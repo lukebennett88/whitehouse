@@ -19,7 +19,7 @@ export const Label = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits.label.description}</Markdown>
             </summary>

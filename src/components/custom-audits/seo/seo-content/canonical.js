@@ -19,7 +19,7 @@ export const Canonical = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits.canonical.description}</Markdown>
             </summary>

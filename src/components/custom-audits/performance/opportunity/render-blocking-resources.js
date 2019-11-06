@@ -21,7 +21,7 @@ export const RenderBlockingResources = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['render-blocking-resources'].description}

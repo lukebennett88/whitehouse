@@ -21,7 +21,7 @@ export const AriaRequiredChildren = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['aria-required-children'].description}

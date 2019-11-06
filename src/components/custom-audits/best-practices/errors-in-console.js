@@ -19,7 +19,7 @@ export const ErrorsInConsole = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['errors-in-console'].description}

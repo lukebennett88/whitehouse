@@ -24,7 +24,7 @@ export const ExternalAnchorsUseRelNoopener = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {

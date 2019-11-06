@@ -19,7 +19,7 @@ export const AudioCaption = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['audio-caption'].description}

@@ -19,7 +19,7 @@ export const RobotsTxt = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits['robots-txt'].description}</Markdown>
             </summary>

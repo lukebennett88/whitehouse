@@ -21,7 +21,7 @@ export const UsesResponsiveImages = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['uses-responsive-images'].description}

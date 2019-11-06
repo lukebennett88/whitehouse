@@ -19,7 +19,7 @@ export const AriaRequiredParent = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['aria-required-parent'].description}

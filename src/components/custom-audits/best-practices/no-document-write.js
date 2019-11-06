@@ -19,7 +19,7 @@ export const NoDocumentWrite = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['no-document-write'].description}

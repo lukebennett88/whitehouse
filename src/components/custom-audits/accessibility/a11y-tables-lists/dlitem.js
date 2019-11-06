@@ -19,7 +19,7 @@ export const DLItem = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits.dlitem.description}</Markdown>
             </summary>

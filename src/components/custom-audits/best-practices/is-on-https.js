@@ -19,7 +19,7 @@ export const IsOnHttps = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['is-on-https'].description}

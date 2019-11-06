@@ -19,7 +19,7 @@ export const AppCacheManifest = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['appcache-manifest'].description}

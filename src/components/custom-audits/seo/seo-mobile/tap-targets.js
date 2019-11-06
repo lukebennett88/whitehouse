@@ -19,7 +19,7 @@ export const TapTargets = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['tap-targets'].description}

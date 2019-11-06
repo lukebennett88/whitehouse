@@ -21,7 +21,7 @@ export const UsesTextCompression = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['uses-text-compression'].description}

@@ -21,7 +21,7 @@ export const MainthreadWorkBreakdown = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['mainthread-work-breakdown'].description}

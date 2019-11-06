@@ -19,7 +19,7 @@ export const Viewport = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits.viewport.description}</Markdown>
             </summary>

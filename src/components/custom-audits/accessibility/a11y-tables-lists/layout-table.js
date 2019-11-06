@@ -19,7 +19,7 @@ export const LayoutTable = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['layout-table'].description}

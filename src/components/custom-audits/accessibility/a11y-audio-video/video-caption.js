@@ -19,7 +19,7 @@ export const VideoCaption = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['video-caption'].description}

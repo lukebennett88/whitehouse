@@ -19,7 +19,7 @@ export const UnminifiedCSS = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['unminified-css'].description}

@@ -21,7 +21,7 @@ export const UnminifiedJavascript = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['unminified-javascript'].description}

@@ -19,7 +19,7 @@ export const ValidLang = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits['valid-lang'].description}</Markdown>
             </summary>

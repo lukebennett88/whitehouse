@@ -19,7 +19,7 @@ export const MetaViewport = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['meta-viewport'].description}
@@ -36,8 +36,8 @@ export const MetaViewport = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['meta-viewport'].details &&
                       lighthouse.audits['meta-viewport'].details.items.map(
-                        item => (
-                          <tr key={item.path} className="odd:bg-white">
+                        (item, index) => (
+                          <tr key={index} className="odd:bg-white">
                             <td
                               title={item.selector}
                               className="flex items-center py-2 px-4"

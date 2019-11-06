@@ -19,7 +19,7 @@ export const ImageAlt = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits['image-alt'].description}</Markdown>
             </summary>
@@ -30,8 +30,8 @@ export const ImageAlt = ({ lighthouse }) =>
                     <thead>
                       <tr>
                         {lighthouse.audits['image-alt'].details.headings.map(
-                          heading => (
-                            <th className="font-black px-4 py-2">
+                          (heading, index) => (
+                            <th key={index} className="font-black px-4 py-2">
                               {heading.text}
                             </th>
                           )
@@ -43,14 +43,20 @@ export const ImageAlt = ({ lighthouse }) =>
                         lighthouse.audits['image-alt'].details.items.map(
                           (item, index) => (
                             <tr key={index} className="odd:bg-white">
-                              <td title={item.href} className="py-2 px-4">
-                                <div>
-                                  <div>{item.href}</div>
-                                </div>
-                              </td>
-                              <td title={item.selector} className="py-2 px-4">
-                                <div>
-                                  <div>{item.text}</div>
+                              <td
+                                title={item.node.selector}
+                                className="py-2 px-4"
+                              >
+                                <div className="mt-2">
+                                  <div>{item.node.explanation}</div>
+                                  <div className="bg-indigo-200 my-2 p-4 rounded">
+                                    <p className="font-black">
+                                      {item.node.nodeLabel}
+                                    </p>
+                                    <code className="font-black text-indigo-800 w-full">
+                                      {item.node.snippet}
+                                    </code>
+                                  </div>
                                 </div>
                               </td>
                             </tr>

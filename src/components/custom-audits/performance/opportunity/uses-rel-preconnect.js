@@ -19,7 +19,7 @@ export const UsesRelPreconnect = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['uses-rel-preconnect'].description}

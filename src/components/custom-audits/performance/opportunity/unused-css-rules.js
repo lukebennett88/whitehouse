@@ -19,7 +19,7 @@ export const UnusedCSSRules = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['unused-css-rules'].description}

@@ -19,7 +19,7 @@ export const ListItem = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>{lighthouse.audits.listitem.description}</Markdown>
             </summary>

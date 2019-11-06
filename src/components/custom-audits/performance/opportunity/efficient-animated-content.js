@@ -21,7 +21,7 @@ export const EfficientAnimatedContent = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['efficient-animated-content'].description}

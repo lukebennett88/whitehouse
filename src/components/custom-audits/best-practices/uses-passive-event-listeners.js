@@ -21,7 +21,7 @@ export const UsesPassiveEventListeners = ({ lighthouse }) =>
           </span>
         </dt>
         <dd>
-          <details>
+          <details open>
             <summary>
               <Markdown>
                 {lighthouse.audits['no-vulnerable-libraries'].description}
