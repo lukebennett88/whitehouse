@@ -19,7 +19,10 @@ const AccessibilityIndex = ({ lighthouse }) => {
     colors = `bg-red-300 text-red-900`;
   }
   return (
-    <article id="accessibility" className="bg-indigo-100 my-4 px-4 py-6">
+    <article
+      id="accessibility"
+      className="bg-indigo-100 my-4 px-4 py-6 shadow hover:shadow-lg"
+    >
       <details>
         <summary>
           <div className="flex items-center">
