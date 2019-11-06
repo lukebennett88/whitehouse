@@ -8,7 +8,7 @@ import { MetaViewport } from './meta-viewport';
 const A11yBestPractices = ({ lighthouse }) => {
   // Get list of all tests for group
   const group = lighthouse.categories.accessibility.auditRefs.filter(
-    auditRef => auditRef.group === 'aria-allowed-attr'
+    auditRef => auditRef.group === 'a11y-best-practices'
   );
   const auditsFromGroup = group.map(test => test.id);
 

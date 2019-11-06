@@ -8,7 +8,7 @@ import { ValidLang } from './valid-lang';
 const A11yLanguage = ({ lighthouse }) => {
   // Get list of all tests for group
   const group = lighthouse.categories.accessibility.auditRefs.filter(
-    auditRef => auditRef.group === 'aria-allowed-attr'
+    auditRef => auditRef.group === 'a11y-language'
   );
   const auditsFromGroup = group.map(test => test.id);
 

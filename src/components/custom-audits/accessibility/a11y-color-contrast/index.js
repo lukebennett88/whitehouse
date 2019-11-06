@@ -6,7 +6,7 @@ import { ColorContrast } from './color-contrast';
 const A11yColorContrast = ({ lighthouse }) => {
   // Get list of all tests for group
   const group = lighthouse.categories.accessibility.auditRefs.filter(
-    auditRef => auditRef.group === 'aria-allowed-attr'
+    auditRef => auditRef.group === 'a11y-color-contrast'
   );
   const auditsFromGroup = group.map(test => test.id);
 

@@ -13,7 +13,7 @@ import { ObjectAlt } from './object-alt';
 const A11yNamesLabels = ({ lighthouse }) => {
   // Get list of all tests for group
   const group = lighthouse.categories.accessibility.auditRefs.filter(
-    auditRef => auditRef.group === 'aria-allowed-attr'
+    auditRef => auditRef.group === 'a11y-names-labels'
   );
   const auditsFromGroup = group.map(test => test.id);
 

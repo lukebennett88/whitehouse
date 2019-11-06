@@ -8,7 +8,7 @@ import { VideoDescription } from './video-description';
 const A11yAudioVideo = ({ lighthouse }) => {
   // Get list of all tests for group
   const group = lighthouse.categories.accessibility.auditRefs.filter(
-    auditRef => auditRef.group === 'aria-allowed-attr'
+    auditRef => auditRef.group === 'a11y-audio-video'
   );
   const auditsFromGroup = group.map(test => test.id);
 
