@@ -42,6 +42,7 @@ const Scores = ({ lighthouse }) => {
       <div className="flex w-full md:w-1/4">
         <AnchorLink
           href="#performance"
+          offset="12"
           className="bg-indigo-100 flex flex-1 flex-col items-center justify-between mx-2 px-4 py-6 shadow hover:shadow-lg"
         >
           <h2 className="font-black leading-none text-2xl text-center">
@@ -60,6 +61,7 @@ const Scores = ({ lighthouse }) => {
       <div className="flex w-full md:w-1/4">
         <AnchorLink
           href="#accessibility"
+          offset="12"
           className="bg-indigo-100 flex flex-1 flex-col items-center justify-between mx-2 px-4 py-6 shadow hover:shadow-lg"
         >
           <h2 className="font-black leading-none text-2xl text-center">
@@ -79,6 +81,7 @@ const Scores = ({ lighthouse }) => {
       <div className="flex w-full md:w-1/4">
         <AnchorLink
           href="#best-practices"
+          offset="12"
           className="bg-indigo-100 flex flex-1 flex-col items-center justify-between mx-2 px-4 py-6 shadow hover:shadow-lg"
         >
           <h2 className="font-black leading-none text-2xl text-center">
@@ -98,6 +101,7 @@ const Scores = ({ lighthouse }) => {
       <div className="flex w-full md:w-1/4">
         <AnchorLink
           href="#seo"
+          offset="12"
           className="bg-indigo-100 flex flex-1 flex-col items-center justify-between mx-2 px-4 py-6 shadow hover:shadow-lg"
         >
           <h2 className="font-black leading-none text-2xl text-center">SEO</h2>
