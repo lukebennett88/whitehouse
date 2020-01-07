@@ -4,7 +4,7 @@ import Markdown from 'markdown-to-jsx';
 export const NoVulnerableLibraries = ({ lighthouse }) =>
   lighthouse.audits['no-vulnerable-libraries'].score !== 1 &&
   lighthouse.audits['no-vulnerable-libraries'].score !== null && (
-    <li id="doctype">
+    <li id="no-vulnerable-libraries">
       <dl>
         <dt>
           <Markdown>
