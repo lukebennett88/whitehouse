@@ -26,7 +26,7 @@ export const ImageAlt = ({ lighthouse }) =>
             <div className="mt-4">
               {lighthouse.audits['image-alt'].details && (
                 <div className="overflow-x-auto">
-                  <table className="mt-2 w-full">
+                  <table className="mt-2">
                     <thead>
                       <tr>
                         {lighthouse.audits['image-alt'].details.headings.map(
@@ -44,8 +44,8 @@ export const ImageAlt = ({ lighthouse }) =>
                           (item, index) => (
                             <tr key={index} className="odd:bg-white">
                               <td
-                                title={item.node.selector}
-                                className="py-2 px-4"
+                                title={item.selector}
+                                className="flex items-center py-2 px-4"
                               >
                                 <div className="mt-2">
                                   <div>{item.node.explanation}</div>
@@ -53,9 +53,9 @@ export const ImageAlt = ({ lighthouse }) =>
                                     <p className="font-black">
                                       {item.node.nodeLabel}
                                     </p>
-                                    <code className="font-black text-indigo-800 w-full">
+                                    <div className="font-black text-indigo-800">
                                       {item.node.snippet}
-                                    </code>
+                                    </div>
                                   </div>
                                 </div>
                               </td>
