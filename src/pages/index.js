@@ -14,6 +14,7 @@ import hawkesconveyancing from '../data/hawkesconveyancing.com.au.json';
 import phirannodesigns from '../data/phirannodesigns.com.au.json';
 import photoenlargements from '../data/photoenlargements.com.au.json';
 import portmacquarieplumbing from '../data/portmacquarieplumbing.com.au.json';
+import omnicare from '../data/omnicare.org.au.json';
 
 const CustomAuditPage = () => {
   const [lighthouse, setLighthouse] = React.useState(eastlandtruss);
@@ -24,54 +25,61 @@ const CustomAuditPage = () => {
         <button
           onClick={() => setLighthouse(eastlandtruss)}
           type="button"
-          className="bg-indigo-300 font-black px-4 py-1 mt-6 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
+          className="px-4 py-1 mx-2 mt-6 text-xs font-black tracking-wide text-indigo-900 uppercase bg-indigo-300 rounded-full hover:shadow"
         >
           Eastland Truss
         </button>
         <button
           onClick={() => setLighthouse(feelfitpm)}
           type="button"
-          className="bg-indigo-300 font-black px-4 py-1 mt-6 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
+          className="px-4 py-1 mx-2 mt-6 text-xs font-black tracking-wide text-indigo-900 uppercase bg-indigo-300 rounded-full hover:shadow"
         >
           FeelFit
         </button>
         <button
           onClick={() => setLighthouse(hawkesconveyancing)}
           type="button"
-          className="bg-indigo-300 font-black px-4 py-1 mt-6 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
+          className="px-4 py-1 mx-2 mt-6 text-xs font-black tracking-wide text-indigo-900 uppercase bg-indigo-300 rounded-full hover:shadow"
         >
           Hawkes Conveyancing
         </button>
         <button
           onClick={() => setLighthouse(phirannodesigns)}
           type="button"
-          className="bg-indigo-300 font-black px-4 py-1 mt-6 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
+          className="px-4 py-1 mx-2 mt-6 text-xs font-black tracking-wide text-indigo-900 uppercase bg-indigo-300 rounded-full hover:shadow"
         >
           Phiranno Designs
         </button>
         <button
           onClick={() => setLighthouse(photoenlargements)}
           type="button"
-          className="bg-indigo-300 font-black px-4 py-1 mt-6 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
+          className="px-4 py-1 mx-2 mt-6 text-xs font-black tracking-wide text-indigo-900 uppercase bg-indigo-300 rounded-full hover:shadow"
         >
           Photo Enlargements
         </button>
         <button
           onClick={() => setLighthouse(portmacquarieplumbing)}
           type="button"
-          className="bg-indigo-300 font-black px-4 py-1 mt-6 mx-2 rounded-full text-indigo-900 text-xs tracking-wide uppercase hover:shadow"
+          className="px-4 py-1 mx-2 mt-6 text-xs font-black tracking-wide text-indigo-900 uppercase bg-indigo-300 rounded-full hover:shadow"
         >
           Port Plumbing
         </button>
+        <button
+          onClick={() => setLighthouse(omnicare)}
+          type="button"
+          className="px-4 py-1 mx-2 mt-6 text-xs font-black tracking-wide text-indigo-900 uppercase bg-indigo-300 rounded-full hover:shadow"
+        >
+          Omnicare
+        </button>
       </div>
-      <h1 className="font-black leading-none mt-12 overflow-x-auto text-4xl w-full">
+      <h1 className="w-full mt-12 overflow-x-auto text-4xl font-black leading-none">
         <span>Report for: </span>
         <br />
         <a
           href={lighthouse.finalUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="leading-loose text-2xl text-indigo-700"
+          className="text-2xl leading-loose text-indigo-700"
         >
           {lighthouse.finalUrl}
         </a>
