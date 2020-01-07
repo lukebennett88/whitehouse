@@ -38,14 +38,14 @@ const Scores = ({ lighthouse }) => {
     seoColors = `bg-red-300 text-red-900`;
   }
   return (
-    <div className="flex mt-6 -mx-2">
-      <div className="flex w-full md:w-1/4">
+    <div className="flex flex-wrap -mx-2">
+      <div className="flex w-full mt-6 md:w-1/4">
         <AnchorLink
           href="#performance"
           offset="12"
-          className="bg-indigo-100 flex flex-1 flex-col items-center justify-between mx-2 px-4 py-6 shadow hover:shadow-lg"
+          className="flex flex-col items-center justify-between flex-1 px-4 py-6 mx-2 bg-indigo-100 shadow hover:shadow-lg"
         >
-          <h2 className="font-black leading-none text-2xl text-center">
+          <h2 className="text-2xl font-black leading-none text-center">
             Performance
           </h2>
           <span
@@ -58,13 +58,13 @@ const Scores = ({ lighthouse }) => {
           </span>
         </AnchorLink>
       </div>
-      <div className="flex w-full md:w-1/4">
+      <div className="flex w-full mt-6 md:w-1/4">
         <AnchorLink
           href="#accessibility"
           offset="12"
-          className="bg-indigo-100 flex flex-1 flex-col items-center justify-between mx-2 px-4 py-6 shadow hover:shadow-lg"
+          className="flex flex-col items-center justify-between flex-1 px-4 py-6 mx-2 bg-indigo-100 shadow hover:shadow-lg"
         >
-          <h2 className="font-black leading-none text-2xl text-center">
+          <h2 className="text-2xl font-black leading-none text-center">
             Accessibility
           </h2>
           <span
@@ -78,13 +78,13 @@ const Scores = ({ lighthouse }) => {
           </span>
         </AnchorLink>
       </div>
-      <div className="flex w-full md:w-1/4">
+      <div className="flex w-full mt-6 md:w-1/4">
         <AnchorLink
           href="#best-practices"
           offset="12"
-          className="bg-indigo-100 flex flex-1 flex-col items-center justify-between mx-2 px-4 py-6 shadow hover:shadow-lg"
+          className="flex flex-col items-center justify-between flex-1 px-4 py-6 mx-2 bg-indigo-100 shadow hover:shadow-lg"
         >
-          <h2 className="font-black leading-none text-2xl text-center">
+          <h2 className="text-2xl font-black leading-none text-center">
             Best Practices
           </h2>
           <span
@@ -98,13 +98,13 @@ const Scores = ({ lighthouse }) => {
           </span>
         </AnchorLink>
       </div>
-      <div className="flex w-full md:w-1/4">
+      <div className="flex w-full mt-6 md:w-1/4">
         <AnchorLink
           href="#seo"
           offset="12"
-          className="bg-indigo-100 flex flex-1 flex-col items-center justify-between mx-2 px-4 py-6 shadow hover:shadow-lg"
+          className="flex flex-col items-center justify-between flex-1 px-4 py-6 mx-2 bg-indigo-100 shadow hover:shadow-lg"
         >
-          <h2 className="font-black leading-none text-2xl text-center">SEO</h2>
+          <h2 className="text-2xl font-black leading-none text-center">SEO</h2>
           <span
             className={`${seoColors} flex font-black h-24 items-center justify-center mt-4 rounded-full text-4xl w-24`}
           >
