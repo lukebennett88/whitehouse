@@ -28,7 +28,7 @@ const BestPracticesIndex = ({ lighthouse }) => {
   return (
     <article
       id="best-practices"
-      className="bg-indigo-100 my-4 px-4 py-6 shadow hover:shadow-lg"
+      className="px-4 py-6 my-4 bg-indigo-100 shadow hover:shadow-lg"
     >
       <details open>
         <summary>
@@ -42,7 +42,7 @@ const BestPracticesIndex = ({ lighthouse }) => {
                 ) / 100
               ).toFixed(0)}
             </span>
-            <h3 className="font-black ml-2 text-3xl">Best Practices</h3>
+            <h3 className="ml-2 text-3xl font-black">Best Practices</h3>
           </div>
         </summary>
 
