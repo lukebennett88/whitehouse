@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import Meta from '../components/meta';
 import Scores from '../components/scores';
+import Metrics from '../components/metrics';
 import Performance from '../components/custom-audits/performance';
 import Accessibility from '../components/custom-audits/accessibility';
 import BestPractices from '../components/custom-audits/best-practices';
@@ -85,6 +86,7 @@ const CustomAuditPage = () => {
         </a>
       </h1>
       <Scores lighthouse={lighthouse} />
+      <Metrics lighthouse={lighthouse} />
       <Performance lighthouse={lighthouse} />
       <Accessibility lighthouse={lighthouse} />
       <BestPractices lighthouse={lighthouse} />
