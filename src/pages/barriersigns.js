@@ -9,10 +9,10 @@ import Accessibility from '../components/custom-audits/accessibility';
 import BestPractices from '../components/custom-audits/best-practices';
 import SEO from '../components/custom-audits/seo';
 
-import omnicare from '../data/omnicare.org.au.json';
+import barriersigns from '../data/barriersigns.com.au.json';
 
 const CustomAuditPage = () => {
-  const [lighthouse] = React.useState(omnicare);
+  const [lighthouse] = React.useState(barriersigns);
   return (
     <Layout>
       <Meta title="Home" />
