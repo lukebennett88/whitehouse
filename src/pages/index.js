@@ -17,6 +17,8 @@ import photoenlargements from '../data/photoenlargements.com.au.json';
 import portmacquarieplumbing from '../data/portmacquarieplumbing.com.au.json';
 import omnicare from '../data/omnicare.org.au.json';
 import barriersigns from '../data/barriersigns.com.au.json';
+import barriersigns2 from '../data/barriersigns.com.au-2.json';
+import braillebarrier from '../data/braillebarrier.com.au.json';
 
 const CustomAuditPage = () => {
   const [lighthouse, setLighthouse] = React.useState(eastlandtruss);
@@ -79,6 +81,20 @@ const CustomAuditPage = () => {
           className="px-4 py-1 mx-2 mt-6 text-xs font-black tracking-wide text-indigo-900 uppercase bg-indigo-300 rounded-full hover:shadow"
         >
           Barrier Signs
+        </button>
+        <button
+          onClick={() => setLighthouse(barriersigns2)}
+          type="button"
+          className="px-4 py-1 mx-2 mt-6 text-xs font-black tracking-wide text-indigo-900 uppercase bg-indigo-300 rounded-full hover:shadow"
+        >
+          Barrier Signs 2
+        </button>
+        <button
+          onClick={() => setLighthouse(braillebarrier)}
+          type="button"
+          className="px-4 py-1 mx-2 mt-6 text-xs font-black tracking-wide text-indigo-900 uppercase bg-indigo-300 rounded-full hover:shadow"
+        >
+          Braille@Barrier
         </button>
       </div>
       <h1 className="w-full mt-12 overflow-x-auto text-4xl font-black leading-none">
