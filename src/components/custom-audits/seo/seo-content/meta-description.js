@@ -42,7 +42,7 @@ export const MetaDescription = ({ lighthouse }) =>
                     <tbody>
                       {lighthouse.audits['meta-description'].details &&
                         lighthouse.audits['meta-description'].details.items.map(
-                          item => (
+                          (item) => (
                             <tr key={item.path} className="odd:bg-white">
                               <td
                                 title={item.selector}

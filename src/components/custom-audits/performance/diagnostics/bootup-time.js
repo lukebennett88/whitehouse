@@ -55,7 +55,7 @@ export const BootupTime = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['bootup-time'].details &&
                       lighthouse.audits['bootup-time'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.url} className="odd:bg-white">
                             <td className="flex items-center max-w-xl py-2 px-4 truncate">
                               {item.url}

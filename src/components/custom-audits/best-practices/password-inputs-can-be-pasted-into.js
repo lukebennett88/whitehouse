@@ -43,7 +43,7 @@ export const PasswordInputsCanBePastedInto = ({ lighthouse }) =>
                       <tr>
                         {lighthouse.audits[
                           'password-inputs-can-be-pasted-into'
-                        ].details.headings.map(heading => (
+                        ].details.headings.map((heading) => (
                           <th
                             key={heading.key}
                             className="font-black px-4 py-2"

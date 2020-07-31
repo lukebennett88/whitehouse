@@ -59,7 +59,7 @@ export const UnminifiedJavascript = ({ lighthouse }) =>
                     {lighthouse.audits['unminified-javascript'].details &&
                       lighthouse.audits[
                         'unminified-javascript'
-                      ].details.items.map(item => (
+                      ].details.items.map((item) => (
                         <tr key={item.url} className="odd:bg-white">
                           <td
                             title={item.url}

@@ -42,7 +42,7 @@ export const ExternalAnchorsUseRelNoopener = ({ lighthouse }) =>
                       <tr>
                         {lighthouse.audits[
                           'external-anchors-use-rel-noopener'
-                        ].details.headings.map(heading => (
+                        ].details.headings.map((heading) => (
                           <th
                             key={heading.key}
                             className="font-black px-4 py-2"

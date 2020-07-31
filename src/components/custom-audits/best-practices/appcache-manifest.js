@@ -43,7 +43,7 @@ export const AppCacheManifest = ({ lighthouse }) =>
                       {lighthouse.audits['appcache-manifest'].details &&
                         lighthouse.audits[
                           'appcache-manifest'
-                        ].details.items.map(item => (
+                        ].details.items.map((item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

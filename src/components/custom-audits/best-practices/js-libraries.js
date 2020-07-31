@@ -32,7 +32,7 @@ export const JSLibraries = ({ lighthouse }) =>
                     <thead>
                       <tr>
                         {lighthouse.audits['js-libraries'].details.headings.map(
-                          heading => (
+                          (heading) => (
                             <th
                               key={heading.key}
                               className="font-black px-4 py-2"

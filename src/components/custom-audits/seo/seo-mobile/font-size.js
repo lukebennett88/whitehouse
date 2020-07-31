@@ -30,7 +30,7 @@ export const FontSize = ({ lighthouse }) =>
                     <thead>
                       <tr>
                         {lighthouse.audits['font-size'].details.headings.map(
-                          heading => (
+                          (heading) => (
                             <th className="font-black px-4 py-2">
                               {heading.text}
                             </th>
@@ -41,7 +41,7 @@ export const FontSize = ({ lighthouse }) =>
                     <tbody>
                       {lighthouse.audits['font-size'].details &&
                         lighthouse.audits['font-size'].details.items.map(
-                          item => (
+                          (item) => (
                             <tr key={item.path} className="odd:bg-white">
                               <td
                                 title={item.selector}

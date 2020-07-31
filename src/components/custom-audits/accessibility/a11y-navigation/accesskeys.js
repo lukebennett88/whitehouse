@@ -33,7 +33,7 @@ export const Accesskeys = ({ lighthouse }) =>
                   </thead>
                   <tbody>
                     {lighthouse.audits.accesskeys.details &&
-                      lighthouse.audits.accesskeys.details.items.map(item => (
+                      lighthouse.audits.accesskeys.details.items.map((item) => (
                         <tr key={item.path} className="odd:bg-white">
                           <td
                             title={item.selector}

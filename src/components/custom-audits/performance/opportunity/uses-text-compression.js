@@ -59,7 +59,7 @@ export const UsesTextCompression = ({ lighthouse }) =>
                     {lighthouse.audits['uses-text-compression'].details &&
                       lighthouse.audits[
                         'uses-text-compression'
-                      ].details.items.map(item => (
+                      ].details.items.map((item) => (
                         <tr key={item.url} className="odd:bg-white">
                           <td className="flex items-center max-w-xl py-2 px-4 truncate">
                             {item.url}

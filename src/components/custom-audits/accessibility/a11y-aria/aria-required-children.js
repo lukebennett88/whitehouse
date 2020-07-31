@@ -39,7 +39,7 @@ export const AriaRequiredChildren = ({ lighthouse }) =>
                     {lighthouse.audits['aria-required-children'].details &&
                       lighthouse.audits[
                         'aria-required-children'
-                      ].details.items.map(item => (
+                      ].details.items.map((item) => (
                         <tr key={item.path} className="odd:bg-white">
                           <td
                             title={item.selector}

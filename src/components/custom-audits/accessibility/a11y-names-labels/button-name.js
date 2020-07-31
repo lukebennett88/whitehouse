@@ -36,7 +36,7 @@ export const ButtonName = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['button-name'].details &&
                       lighthouse.audits['button-name'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

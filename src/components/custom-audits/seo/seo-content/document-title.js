@@ -42,7 +42,7 @@ export const DocumentTitle = ({ lighthouse }) =>
                     <tbody>
                       {lighthouse.audits['document-title'].details &&
                         lighthouse.audits['document-title'].details.items.map(
-                          item => (
+                          (item) => (
                             <tr key={item.path} className="odd:bg-white">
                               <td
                                 title={item.selector}

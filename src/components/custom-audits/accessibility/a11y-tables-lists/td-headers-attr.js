@@ -36,7 +36,7 @@ export const TDHeadersAttr = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['td-headers-attr'].details &&
                       lighthouse.audits['td-headers-attr'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

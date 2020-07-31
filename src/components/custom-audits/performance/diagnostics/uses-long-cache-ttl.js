@@ -56,7 +56,7 @@ export const UsesLongCacheTTL = ({ lighthouse }) =>
                     {lighthouse.audits['uses-long-cache-ttl'].details &&
                       lighthouse.audits[
                         'uses-long-cache-ttl'
-                      ].details.items.map(item => (
+                      ].details.items.map((item) => (
                         <tr key={item.url} className="odd:bg-white">
                           <td
                             title={item.url}

@@ -33,7 +33,7 @@ export const DLItem = ({ lighthouse }) =>
                   </thead>
                   <tbody>
                     {lighthouse.audits.dlitem.details &&
-                      lighthouse.audits.dlitem.details.items.map(item => (
+                      lighthouse.audits.dlitem.details.items.map((item) => (
                         <tr key={item.path} className="odd:bg-white">
                           <td
                             title={item.selector}

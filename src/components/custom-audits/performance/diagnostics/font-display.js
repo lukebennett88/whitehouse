@@ -47,7 +47,7 @@ export const FontDisplay = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['font-display'].details &&
                       lighthouse.audits['font-display'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.url} className="odd:bg-white">
                             <td
                               title={item.url}

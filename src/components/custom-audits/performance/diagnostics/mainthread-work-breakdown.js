@@ -55,7 +55,7 @@ export const MainthreadWorkBreakdown = ({ lighthouse }) =>
                     {lighthouse.audits['mainthread-work-breakdown'].details &&
                       lighthouse.audits[
                         'mainthread-work-breakdown'
-                      ].details.items.map(item => (
+                      ].details.items.map((item) => (
                         <tr key={item.groupLabel} className="odd:bg-white">
                           <td className="flex items-center max-w-xl py-2 px-4 truncate">
                             {item.groupLabel}

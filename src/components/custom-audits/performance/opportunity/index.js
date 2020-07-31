@@ -16,7 +16,7 @@ import { EfficientAnimatedContent } from './efficient-animated-content';
 
 const Opportunity = ({ lighthouse }) =>
   Object.values(lighthouse.audits).some(
-    audit => audit.details && audit.details.type === 'opportunity'
+    (audit) => audit.details && audit.details.type === 'opportunity'
   ) && (
     <>
       <hr className="mt-8" />

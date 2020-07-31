@@ -59,7 +59,7 @@ export const RenderBlockingResources = ({ lighthouse }) =>
                     {lighthouse.audits['render-blocking-resources'].details &&
                       lighthouse.audits[
                         'render-blocking-resources'
-                      ].details.items.map(item => (
+                      ].details.items.map((item) => (
                         <tr key={item.url} className="odd:bg-white">
                           <td
                             title={item.url}

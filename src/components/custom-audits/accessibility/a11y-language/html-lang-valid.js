@@ -36,7 +36,7 @@ export const HTMLLangValid = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['html-lang-valid'].details &&
                       lighthouse.audits['html-lang-valid'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

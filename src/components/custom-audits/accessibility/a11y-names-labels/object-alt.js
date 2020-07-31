@@ -34,7 +34,7 @@ export const ObjectAlt = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['object-alt'].details &&
                       lighthouse.audits['object-alt'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

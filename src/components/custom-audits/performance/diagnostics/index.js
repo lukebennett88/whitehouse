@@ -9,7 +9,7 @@ import { ThirdPartySummary } from './third-party-summary';
 
 const Diagnostics = ({ lighthouse }) =>
   lighthouse.categories.performance.auditRefs.some(
-    audit => audit.group && audit.group === 'diagnostics'
+    (audit) => audit.group && audit.group === 'diagnostics'
   ) && (
     <>
       <hr className="mt-8" />

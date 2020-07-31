@@ -36,7 +36,7 @@ export const DefinitionList = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['definition-list'].details &&
                       lighthouse.audits['definition-list'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

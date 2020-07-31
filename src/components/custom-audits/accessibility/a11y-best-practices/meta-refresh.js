@@ -36,7 +36,7 @@ export const MetaRefresh = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['meta-refresh'].details &&
                       lighthouse.audits['meta-refresh'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

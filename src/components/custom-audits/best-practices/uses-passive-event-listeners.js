@@ -35,7 +35,7 @@ export const UsesPassiveEventListeners = ({ lighthouse }) =>
                       <tr>
                         {lighthouse.audits[
                           'uses-passive-event-listeners'
-                        ].details.headings.map(heading => (
+                        ].details.headings.map((heading) => (
                           <th
                             key={heading.text}
                             className="px-4 py-2 font-black"

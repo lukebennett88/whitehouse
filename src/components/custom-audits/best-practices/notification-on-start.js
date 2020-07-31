@@ -35,7 +35,7 @@ export const NotificationOnStart = ({ lighthouse }) =>
                       <tr>
                         {lighthouse.audits[
                           'notification-on-start'
-                        ].details.headings.map(heading => (
+                        ].details.headings.map((heading) => (
                           <th
                             key={heading.key}
                             className="font-black px-4 py-2"

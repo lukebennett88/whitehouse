@@ -50,7 +50,7 @@ export const UsesWebpImages = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['uses-webp-images'].details &&
                       lighthouse.audits['uses-webp-images'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.url} className="odd:bg-white">
                             <td
                               title={item.url}

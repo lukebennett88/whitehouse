@@ -59,7 +59,7 @@ export const UsesOptimizedImages = ({ lighthouse }) =>
                     {lighthouse.audits['uses-optimized-images'].details &&
                       lighthouse.audits[
                         'uses-optimized-images'
-                      ].details.items.map(item => (
+                      ].details.items.map((item) => (
                         <tr key={item.url} className="odd:bg-white">
                           <td
                             title={item.url}

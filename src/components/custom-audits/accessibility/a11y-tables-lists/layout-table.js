@@ -36,7 +36,7 @@ export const LayoutTable = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['layout-table'].details &&
                       lighthouse.audits['layout-table'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

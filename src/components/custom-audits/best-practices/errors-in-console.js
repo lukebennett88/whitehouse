@@ -33,7 +33,7 @@ export const ErrorsInConsole = ({ lighthouse }) =>
                       <tr>
                         {lighthouse.audits[
                           'errors-in-console'
-                        ].details.headings.map(heading => (
+                        ].details.headings.map((heading) => (
                           <th
                             key={heading.key}
                             className="font-black px-4 py-2"

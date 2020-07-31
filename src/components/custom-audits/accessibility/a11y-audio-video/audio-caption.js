@@ -36,7 +36,7 @@ export const AudioCaption = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['audio-caption'].details &&
                       lighthouse.audits['audio-caption'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

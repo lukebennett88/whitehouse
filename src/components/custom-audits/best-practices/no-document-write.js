@@ -43,7 +43,7 @@ export const NoDocumentWrite = ({ lighthouse }) =>
                       {lighthouse.audits['no-document-write'].details &&
                         lighthouse.audits[
                           'no-document-write'
-                        ].details.items.map(item => (
+                        ].details.items.map((item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td title={item.selector}>
                               <div className="flex items-center py-2 px-4">

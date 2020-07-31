@@ -35,7 +35,7 @@ export const NoVulnerableLibraries = ({ lighthouse }) =>
                       <tr>
                         {lighthouse.audits[
                           'no-vulnerable-libraries'
-                        ].details.headings.map(heading => (
+                        ].details.headings.map((heading) => (
                           <th
                             key={heading.key}
                             className="px-4 py-2 font-black"

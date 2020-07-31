@@ -36,7 +36,7 @@ export const InputImageAlt = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['input-image-alt'].details &&
                       lighthouse.audits['input-image-alt'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

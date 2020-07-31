@@ -30,7 +30,7 @@ export const RobotsTxt = ({ lighthouse }) =>
                     <thead>
                       <tr>
                         {lighthouse.audits['robots-txt'].details.headings.map(
-                          heading => (
+                          (heading) => (
                             <th className="font-black px-4 py-2">
                               {heading.text}
                             </th>

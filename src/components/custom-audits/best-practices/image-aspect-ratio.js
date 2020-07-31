@@ -33,7 +33,7 @@ export const ImageAspectRatio = ({ lighthouse }) =>
                       <tr>
                         {lighthouse.audits[
                           'image-aspect-ratio'
-                        ].details.headings.map(heading => (
+                        ].details.headings.map((heading) => (
                           <th
                             key={heading.key}
                             className="font-black px-4 py-2"

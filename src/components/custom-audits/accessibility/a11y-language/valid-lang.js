@@ -34,7 +34,7 @@ export const ValidLang = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['valid-lang'].details &&
                       lighthouse.audits['valid-lang'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

@@ -33,7 +33,7 @@ export const TabIndex = ({ lighthouse }) =>
                   </thead>
                   <tbody>
                     {lighthouse.audits.tabindex.details &&
-                      lighthouse.audits.tabindex.details.items.map(item => (
+                      lighthouse.audits.tabindex.details.items.map((item) => (
                         <tr key={item.path} className="odd:bg-white">
                           <td
                             title={item.selector}

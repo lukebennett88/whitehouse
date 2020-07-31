@@ -47,7 +47,7 @@ export const UsesRelPreload = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['uses-rel-preload'].details &&
                       lighthouse.audits['uses-rel-preload'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.url} className="odd:bg-white">
                             <td
                               title={item.url}

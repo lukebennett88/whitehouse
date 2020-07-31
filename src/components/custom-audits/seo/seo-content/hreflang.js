@@ -30,7 +30,7 @@ export const HrefLang = ({ lighthouse }) =>
                     <thead>
                       <tr>
                         {lighthouse.audits.hreflang.details.headings.map(
-                          heading => (
+                          (heading) => (
                             <th className="font-black px-4 py-2">
                               {heading.text}
                             </th>

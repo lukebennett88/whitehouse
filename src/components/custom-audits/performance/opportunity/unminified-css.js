@@ -50,7 +50,7 @@ export const UnminifiedCSS = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['unminified-css'].details &&
                       lighthouse.audits['unminified-css'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.url} className="odd:bg-white">
                             <td
                               title={item.url}

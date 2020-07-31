@@ -46,7 +46,7 @@ export const TotalByteWeight = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['total-byte-weight'].details &&
                       lighthouse.audits['total-byte-weight'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.url} className="odd:bg-white">
                             <td
                               title={item.url}

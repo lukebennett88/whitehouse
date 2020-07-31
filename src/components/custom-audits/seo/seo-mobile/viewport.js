@@ -36,7 +36,7 @@ export const Viewport = ({ lighthouse }) =>
                     </thead>
                     <tbody>
                       {lighthouse.audits.viewport.details &&
-                        lighthouse.audits.viewport.details.items.map(item => (
+                        lighthouse.audits.viewport.details.items.map((item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

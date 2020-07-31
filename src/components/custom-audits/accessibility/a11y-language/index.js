@@ -8,19 +8,19 @@ import { ValidLang } from './valid-lang';
 const A11yLanguage = ({ lighthouse }) => {
   // Get list of all tests for group
   const group = lighthouse.categories.accessibility.auditRefs.filter(
-    auditRef => auditRef.group === 'a11y-language'
+    (auditRef) => auditRef.group === 'a11y-language'
   );
-  const auditsFromGroup = group.map(test => test.id);
+  const auditsFromGroup = group.map((test) => test.id);
 
   // Check if any of the audits fail
   const audits = Object.values(lighthouse.audits);
-  const matchingAudits = audits.filter(audit =>
+  const matchingAudits = audits.filter((audit) =>
     auditsFromGroup.includes(audit.id)
   );
 
   // If tests fail, display description
-  const removePassed = matchingAudits.filter(i => i.score !== 1);
-  const failedAudits = removePassed.filter(i => i.score !== null);
+  const removePassed = matchingAudits.filter((i) => i.score !== 1);
+  const failedAudits = removePassed.filter((i) => i.score !== null);
   return (
     <>
       {failedAudits.length > 0 && (

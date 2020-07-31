@@ -36,7 +36,7 @@ export const VideoDescription = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['video-description'].details &&
                       lighthouse.audits['video-description'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

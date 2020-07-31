@@ -12,7 +12,7 @@ export const ScreenshotThumbnails = ({ lighthouse }) => (
         <div className="flex mt-2 -mx-2 overflow-x-auto">
           {lighthouse.audits['screenshot-thumbnails'].details &&
             lighthouse.audits['screenshot-thumbnails'].details.items.map(
-              item => (
+              (item) => (
                 <div key={item.timestamp} className="px-2">
                   <img src={item.data} alt="Screenshot." loading="lazy" />
                 </div>

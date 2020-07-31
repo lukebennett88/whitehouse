@@ -8,19 +8,19 @@ import { VideoDescription } from './video-description';
 const A11yAudioVideo = ({ lighthouse }) => {
   // Get list of all tests for group
   const group = lighthouse.categories.accessibility.auditRefs.filter(
-    auditRef => auditRef.group === 'a11y-audio-video'
+    (auditRef) => auditRef.group === 'a11y-audio-video'
   );
-  const auditsFromGroup = group.map(test => test.id);
+  const auditsFromGroup = group.map((test) => test.id);
 
   // Check if any of the audits fail
   const audits = Object.values(lighthouse.audits);
-  const matchingAudits = audits.filter(audit =>
+  const matchingAudits = audits.filter((audit) =>
     auditsFromGroup.includes(audit.id)
   );
 
   // If tests fail, display description
-  const removePassed = matchingAudits.filter(i => i.score !== 1);
-  const failedAudits = removePassed.filter(i => i.score !== null);
+  const removePassed = matchingAudits.filter((i) => i.score !== 1);
+  const failedAudits = removePassed.filter((i) => i.score !== null);
 
   return (
     <>

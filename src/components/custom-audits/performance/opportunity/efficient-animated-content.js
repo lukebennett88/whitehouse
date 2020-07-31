@@ -59,7 +59,7 @@ export const EfficientAnimatedContent = ({ lighthouse }) =>
                     {lighthouse.audits['efficient-animated-content'].details &&
                       lighthouse.audits[
                         'efficient-animated-content'
-                      ].details.items.map(item => (
+                      ].details.items.map((item) => (
                         <tr key={item.url} className="odd:bg-white">
                           <td
                             title={item.url}

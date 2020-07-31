@@ -33,7 +33,7 @@ export const Bypass = ({ lighthouse }) =>
                   </thead>
                   <tbody>
                     {lighthouse.audits.bypass.details &&
-                      lighthouse.audits.bypass.details.items.map(item => (
+                      lighthouse.audits.bypass.details.items.map((item) => (
                         <tr key={item.path} className="odd:bg-white">
                           <td
                             title={item.selector}

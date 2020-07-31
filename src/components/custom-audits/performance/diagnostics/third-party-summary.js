@@ -13,7 +13,7 @@ export const ThirdPartySummary = ({ lighthouse }) =>
           <div className="flex mt-2 -mx-2 overflow-x-auto">
             {lighthouse.audits['third-party-summary'].details &&
               lighthouse.audits['third-party-summary'].details.items.map(
-                item => (
+                (item) => (
                   <div key={item.timestamp} className="px-2">
                     <img src={item.data} alt="Screenshot." loading="lazy" />
                   </div>

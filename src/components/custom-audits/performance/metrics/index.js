@@ -6,7 +6,7 @@ import { ScreenshotThumbnails } from './screenshot-thumbnails';
 
 const Metrics = ({ lighthouse }) =>
   Object.values(lighthouse.audits).some(
-    audit => audit.details && audit.details.type === 'metrics'
+    (audit) => audit.details && audit.details.type === 'metrics'
   ) && (
     <>
       <h4

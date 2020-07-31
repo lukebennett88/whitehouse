@@ -30,7 +30,7 @@ export const Plugins = ({ lighthouse }) =>
                     <thead>
                       <tr>
                         {lighthouse.audits.plugins.details.headings.map(
-                          heading => (
+                          (heading) => (
                             <th className="font-black px-4 py-2">
                               {heading.text}
                             </th>

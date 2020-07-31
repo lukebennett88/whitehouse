@@ -59,7 +59,7 @@ export const UsesResponsiveImages = ({ lighthouse }) =>
                     {lighthouse.audits['uses-responsive-images'].details &&
                       lighthouse.audits[
                         'uses-responsive-images'
-                      ].details.items.map(item => (
+                      ].details.items.map((item) => (
                         <tr key={item.url} className="odd:bg-white">
                           <td
                             title={item.url}

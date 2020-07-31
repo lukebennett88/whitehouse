@@ -50,7 +50,7 @@ export const OffscreenImages = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['offscreen-images'].details &&
                       lighthouse.audits['offscreen-images'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.url} className="odd:bg-white">
                             <td
                               title={item.url}

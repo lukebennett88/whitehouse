@@ -36,7 +36,7 @@ export const THHasDataCells = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['th-has-data-cells'].details &&
                       lighthouse.audits['th-has-data-cells'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

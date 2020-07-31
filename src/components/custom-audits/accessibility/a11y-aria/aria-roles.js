@@ -34,7 +34,7 @@ export const AriaRoles = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['aria-roles'].details &&
                       lighthouse.audits['aria-roles'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}

@@ -30,7 +30,7 @@ export const Deprecations = ({ lighthouse }) =>
                     <thead>
                       <tr>
                         {lighthouse.audits.deprecations.details.headings.map(
-                          heading => (
+                          (heading) => (
                             <th
                               key={heading.key}
                               className="font-black px-4 py-2"

@@ -36,7 +36,7 @@ export const AriaAllowedAttr = ({ lighthouse }) =>
                   <tbody>
                     {lighthouse.audits['aria-allowed-attr'].details &&
                       lighthouse.audits['aria-allowed-attr'].details.items.map(
-                        item => (
+                        (item) => (
                           <tr key={item.path} className="odd:bg-white">
                             <td
                               title={item.selector}
