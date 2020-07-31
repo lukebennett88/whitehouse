@@ -1,7 +1,3 @@
 {
-  "extends": ["wesbos"],
-  "rules": {
-    "react/prop-types": 0,
-    "arrow-body-style": 0
-  }
+  "extends": ["lukebennett"]
 }
